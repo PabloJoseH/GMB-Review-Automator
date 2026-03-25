@@ -221,15 +221,6 @@ WHATSAPP_API_VERSION=v24.0
 # Cron secret for scheduled tasks
 CRON_SECRET=your_cron_secret
 
-# Paddle (Alternative payments)
-PADDLE_API_KEY=pdl_your_paddle_api_key
-PADDLE_PRICE_ID=pri_your_paddle_price_id
-PADDLE_WEBHOOK_SECRET=pdl_ntfset_your_paddle_webhook_secret
-PADDLE_ENVIRONMENT=sandbox
-NEXT_PUBLIC_PADDLE_ENVIRONMENT=sandbox
-NEXT_PUBLIC_PADDLE_CLIENT_TOKEN=test_your_paddle_client_token
-NEXT_PUBLIC_PADDLE_PRICE_ID=pri_your_paddle_price_id
-
 # Stripe (Payments)
 STRIPE_SECRET_KEY=sk_test_your_stripe_secret_key
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_your_stripe_publishable_key
@@ -243,7 +234,6 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_your_stripe_publishable_key
 4. **OpenAI**: Get an API key at [platform.openai.com](https://platform.openai.com)
 5. **Google Cloud**: Create a project in Google Cloud Console and configure service accounts for GMB and Pub/Sub
 6. **WhatsApp Business API**: Set up WhatsApp Business API in Facebook Developers
-7. **Paddle**: Register at [paddle.com](https://paddle.com) for alternative payments
 
 > ⚠️ **Important**: Never commit the `.env.local` file with real values to the repository. The `.env.example` file contains placeholders so other developers know what variables to configure.
 
