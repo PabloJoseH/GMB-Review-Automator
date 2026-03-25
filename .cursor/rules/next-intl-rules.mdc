@@ -1,0 +1,32 @@
+---
+description: "Reglas específicas para internacionalización (Next-Intl 5)."
+globs: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"]
+---
+
+# 🌍 NEXT-INTL — REGLAS ESPECIALIZADAS
+
+### ✔ Uso de mensajes:
+- Todos los textos deben venir de `/messages/<locale>.json`.
+- No hardcodear strings de interfaz.
+- Respetar namespaces existentes.
+
+### ✔ Namespaces:
+- Si la sección/página ya tiene namespace → usar el mismo.
+- Si no existe → crear uno nuevo dentro del archivo correspondiente.
+- No crear namespaces duplicados.
+
+### ✔ Carga de traducciones:
+- Utilizar las APIs ya implementadas del proyecto:
+  - `i18n/request.ts`
+  - `i18n/navigation.ts`
+  - `i18n/routing.ts`
+
+### 🚫 Prohibido:
+- Introducir loaders alternativos a los existentes.
+- Mezclar idiomas en el código.
+- Crear JSON separados por componente.
+
+---
+
+# 🧠 En caso de duda:
+→ Consultar documentación vía Context7 MCP antes de modificar el sistema.

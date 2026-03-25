@@ -1,0 +1,427 @@
+generator client {
+  provider   = "prisma-client-js"
+  output     = "../app/generated/prisma"
+  engineType = "client"
+}
+
+datasource db {
+  provider  = "postgresql"
+}
+
+model assets {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  messages_id String    @db.Uuid
+  context     String?   @db.VarChar(500)
+  url         String    @unique(map: "assets_url_unique") @db.VarChar(2000)
+  source      String    @db.VarChar(50)
+  mime_type   String?   @db.VarChar(100)
+  size        BigInt?
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+  updated_at  DateTime? @default(now()) @db.Timestamp(6)
+  messages    messages  @relation(fields: [messages_id], references: [id], onDelete: Cascade)
+}
+
+model connections {
+  id                               String              @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  organization_id                  String              @db.Uuid
+  user_id                          String              @db.Uuid
+  provider                         connection_provider
+  external_account_id              String              @db.VarChar(255)
+  created_at                       DateTime?           @default(now()) @db.Timestamp(6)
+  updated_at                       DateTime?           @default(now()) @db.Timestamp(6)
+  type                             String?             @db.VarChar(100)
+  pub_sub                          Boolean?            @default(false)
+  organizations                    organizations       @relation(fields: [organization_id], references: [id], onDelete: Cascade)
+  users_connections_user_idTousers users               @relation("connections_user_idTousers", fields: [user_id], references: [id], onDelete: Cascade)
+  locations                        locations[]
+
+  @@index([organization_id], map: "idx_connections_org_id")
+  @@index([organization_id, created_at(sort: Desc), id, external_account_id, type, provider, pub_sub], map: "idx_connections_org_created")
+  @@index([organization_id, id], map: "idx_connections_org_id_optimized")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model example_reviews {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  location_id String    @db.Uuid
+  author_name String?   @db.VarChar(200)
+  rating      Int?
+  comment     String    @db.VarChar(2000)
+  response    String?   @db.VarChar(2000)
+  review_time DateTime? @db.Timestamp(6)
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+  updated_at  DateTime? @default(now()) @db.Timestamp(6)
+  locations   locations @relation(fields: [location_id], references: [id], onDelete: Cascade)
+
+  @@unique([location_id, author_name, review_time], map: "example_reviews_location_author_time_unique")
+  @@index([location_id], map: "idx_example_reviews_location_id")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model locations {
+  id                                String               @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  connection_id                     String               @db.Uuid
+  google_location_id                String?              @db.VarChar(255)
+  name                              String?              @db.VarChar(400)
+  address_line1                     String?              @db.VarChar(200)
+  address_line2                     String?              @db.VarChar(200)
+  city                              String?              @db.VarChar(100)
+  postal_code                       String?              @db.VarChar(30)
+  region                            String?              @db.VarChar(100)
+  country                           String?              @db.VarChar(2)
+  primary_category                  String?              @db.VarChar(100)
+  website                           String?              @db.VarChar(500)
+  lat                               Decimal?             @db.Decimal(10, 7)
+  lng                               Decimal?             @db.Decimal(10, 7)
+  phone                             String?              @db.VarChar(50)
+  verified                          Boolean?
+  created_by                        String?              @db.Uuid
+  updated_by                        String?              @db.Uuid
+  created_at                        DateTime?            @default(now()) @db.Timestamp(6)
+  updated_at                        DateTime?            @default(now()) @db.Timestamp(6)
+  status                            location_status      @default(inactive)
+  reviews_processed                 Int                  @default(0)
+  reference                         Int                  @default(autoincrement())
+  example_reviews                   example_reviews[]
+  connections                       connections          @relation(fields: [connection_id], references: [id], onDelete: Cascade)
+  users_locations_created_byTousers users?               @relation("locations_created_byTousers", fields: [created_by], references: [id])
+  users_locations_updated_byTousers users?               @relation("locations_updated_byTousers", fields: [updated_by], references: [id])
+  opening_hours                     opening_hours[]
+  prompt_context                    prompt_context?
+  proposed_responses                proposed_responses[]
+  reviews_responses_test             reviews_responses_test[]
+
+  @@index([connection_id], map: "idx_locations_conn_id")
+  @@index([connection_id, status, id], map: "idx_locations_conn_status_optimized")
+  @@index([connection_id, created_at(sort: Desc), id, name, status, primary_category, address_line1, city, phone, website, verified], map: "idx_locations_org_created")
+}
+
+model messages {
+  id                  String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  session_id          String       @db.Uuid
+  content             String       @db.VarChar(70000)
+  position            Int?
+  created_at          DateTime?    @default(now()) @db.Timestamp(6)
+  updated_at          DateTime?    @default(now()) @db.Timestamp(6)
+  role                message_role @default(user)
+  whatsapp_message_id String?
+  assets              assets[]
+  sessions            sessions     @relation(fields: [session_id], references: [id], onDelete: Cascade)
+
+  @@unique([session_id, position], map: "messages_session_position_unique")
+  @@index([session_id, id], map: "idx_messages_session_id")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model opening_hours {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  location_id String    @db.Uuid
+  weekday     weekday
+  open_time   String?   @db.VarChar(10)
+  close_time  String?   @db.VarChar(10)
+  created_at  DateTime? @default(now()) @db.Timestamp(6)
+  updated_at  DateTime? @default(now()) @db.Timestamp(6)
+  locations   locations @relation(fields: [location_id], references: [id], onDelete: Cascade)
+
+  @@index([location_id], map: "idx_opening_hours_location_id")
+}
+
+model organizations {
+  id                                         String         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  primary_phone                              String?        @db.VarChar(50)
+  email                                      String?        @db.VarChar(255)
+  business_name                              String?        @db.VarChar(200)
+  business_address                           String?        @db.VarChar(300)
+  business_id                                String?        @unique(map: "organizations_business_id_unique") @db.VarChar(20)
+  created_by                                 String?        @db.Uuid
+  updated_by                                 String?        @db.Uuid
+  created_at                                 DateTime?      @default(now()) @db.Timestamp(6)
+  updated_at                                 DateTime?      @default(now()) @db.Timestamp(6)
+  organization_clerk_id                      String?        @unique @db.VarChar
+  first_line_of_address                      String
+  city                                       String
+  region                                     String?
+  zip_code                                   String
+  tax_identifier                             String?
+  country                                    String
+  stripe_customer_id                         String?
+  reference                                  Int            @default(autoincrement())
+  connections                                connections[]
+  users_organizations_created_byTousers      users?         @relation("organizations_created_byTousers", fields: [created_by], references: [id])
+  users_organizations_updated_byTousers      users?         @relation("organizations_updated_byTousers", fields: [updated_by], references: [id])
+  payments                                   payments[]
+  subscriptions                              subscriptions?
+  users_users_organization_idToorganizations users[]        @relation("users_organization_idToorganizations")
+
+  @@index([id], map: "idx_organizations_id")
+  @@index([business_name(ops: raw("gin_trgm_ops"))], map: "idx_organizations_business_name_trgm", type: Gin)
+  @@index([id, business_name, organization_clerk_id, created_by], map: "idx_organizations_with_subs")
+}
+
+model prompt_context {
+  id                 String          @id(map: "prompt_context_new_pkey") @db.Uuid
+  location_id        String          @unique(map: "prompt_context_new_location_id_key") @db.Uuid
+  tone               String?         @db.VarChar(255)
+  response_length    response_length @default(medium)
+  cta                String?         @db.VarChar(500)
+  use_emojis         Boolean         @default(false)
+  language           String          @default("english") @db.VarChar(50)
+  on_5_star          star_action     @default(reply)
+  on_4_star          star_action     @default(reply)
+  on_3_star          star_action     @default(reply)
+  on_2_star          star_action     @default(reply)
+  on_1_star          star_action     @default(reply)
+  created_at         DateTime?       @default(now()) @db.Timestamptz(6)
+  updated_at         DateTime?       @default(now()) @db.Timestamptz(6)
+  custom_instruction String?         @db.VarChar(10000)
+  responses_summary  String?
+  locations          locations       @relation(fields: [location_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_prompt_context_location")
+}
+
+model sessions {
+  id              String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id         String     @db.Uuid
+  conversation_id String?    @unique(map: "sessions_previous_response_id_unique") @db.VarChar
+  created_at      DateTime?  @default(now()) @db.Timestamp(6)
+  updated_at      DateTime?  @default(now()) @db.Timestamp(6)
+  agent_managed   Boolean    @default(true)
+  active          Boolean    @default(false)
+  summary         String?
+  tokens          Int        @default(0)
+  messages        messages[]
+  users           users      @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id], map: "idx_sessions_user_id")
+  @@index([user_id, created_at(sort: Desc), id, updated_at], map: "idx_sessions_user_created")
+}
+
+model subscriptions {
+  id                     String              @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  organization_id        String?             @unique(map: "subscriptions_organization_id_unique") @db.Uuid
+  stripe_subscription_id String?
+  stripe_customer_id     String?
+  plan_id                String?
+  status                 String?             @default("incomplete")
+  active_at              DateTime?           @db.Timestamptz(6)
+  past_due_at            DateTime?           @db.Timestamptz(6)
+  trial_start            DateTime?           @db.Timestamptz(6)
+  trial_end              DateTime?           @db.Timestamptz(6)
+  cancel_at_period_end   Boolean?            @default(false)
+  next_payment_amount    Decimal?            @db.Decimal
+  periodStart            DateTime?           @db.Date
+  currency               String?
+  location_active_count  Int                 @default(0)
+  periodEnd              DateTime?           @db.Date
+  created_at             DateTime?           @default(now()) @db.Timestamptz(6)
+  updated_at             DateTime?           @default(now()) @db.Timestamptz(6)
+  subscription_logs      subscription_logs[]
+  organizations          organizations?      @relation(fields: [organization_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+model users {
+  id                                                 String               @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  organization_id                                    String?              @db.Uuid
+  username                                           String               @db.VarChar(100)
+  name                                               String?              @db.VarChar(100)
+  lastname                                           String?              @db.VarChar(100)
+  email                                              String?              @unique(map: "users_email_unique") @db.VarChar(255)
+  role                                               user_role
+  wa_id                                              String               @unique(map: "users_wa_id_unique") @db.VarChar(50)
+  clerk_id                                           String?              @unique(map: "users_clerk_id_unique") @db.VarChar
+  onboarding_status                                  onboarding_status
+  created_at                                         DateTime?            @default(now()) @db.Timestamp(6)
+  updated_at                                         DateTime?            @default(now()) @db.Timestamp(6)
+  reference                                          Int                  @default(autoincrement())
+  connections_connections_user_idTousers             connections[]        @relation("connections_user_idTousers")
+  locations_locations_created_byTousers              locations[]          @relation("locations_created_byTousers")
+  locations_locations_updated_byTousers              locations[]          @relation("locations_updated_byTousers")
+  organizations_organizations_created_byTousers      organizations[]      @relation("organizations_created_byTousers")
+  organizations_organizations_updated_byTousers      organizations[]      @relation("organizations_updated_byTousers")
+  proposed_responses                                 proposed_responses[]
+  sessions                                           sessions[]
+  organizations_users_organization_idToorganizations organizations?       @relation("users_organization_idToorganizations", fields: [organization_id], references: [id])
+
+  @@index([organization_id], map: "idx_users_org_id")
+  @@index([email], map: "idx_users_email")
+  @@index([id], map: "idx_users_id")
+  @@index([wa_id], map: "idx_users_wa_id")
+  @@index([clerk_id], map: "idx_users_clerk_id")
+  @@index([onboarding_status, created_at(sort: Desc), id, organization_id, name, lastname, email, username, wa_id, clerk_id, role], map: "idx_users_dashboard_main")
+  @@index([email(ops: raw("gin_trgm_ops"))], map: "idx_users_email_trgm", type: Gin)
+  @@index([id, organization_id, clerk_id, wa_id, onboarding_status], map: "idx_users_individual_lookup")
+  @@index([lastname(ops: raw("gin_trgm_ops"))], map: "idx_users_lastname_trgm", type: Gin)
+  @@index([name(ops: raw("gin_trgm_ops"))], map: "idx_users_name_trgm", type: Gin)
+  @@index([username(ops: raw("gin_trgm_ops"))], map: "idx_users_username_trgm", type: Gin)
+  @@index([wa_id(ops: raw("gin_trgm_ops"))], map: "idx_users_wa_id_trgm", type: Gin)
+}
+
+model reviews_responses_test {
+  id                             String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  location_id                    String?   @db.Uuid
+  reviewer_name                  String
+  rating                         String
+  comment                        String?
+  create_time                    DateTime? @db.Timestamptz(6)
+  response                       String?
+  instructions                   String?
+  prompt_context_tone            String?
+  prompt_context_handle_one_star String?   @db.VarChar(4000)
+  prompt_context_instructions    String?   @db.VarChar(20000)
+  created_at                     DateTime? @default(now()) @db.Timestamptz(6)
+  updated_at                     DateTime? @default(now()) @db.Timestamptz(6)
+  locations                      locations? @relation(fields: [location_id], references: [id], onDelete: SetNull)
+
+  @@index([location_id], map: "idx_reviews_responses_test_location_id")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model global_config {
+  id                         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  responder_instructions     String
+  responder_model            String
+  responder_response_format  String
+  responder_max_tokens       Int
+  responder_production       Boolean  @default(false)
+  onboarding_instructions    String
+  onboarding_model           String
+  onboarding_response_format String
+  onboarding_max_tokens      Int
+  created_at                 DateTime @default(now()) @db.Timestamptz(6)
+  updated_at                 DateTime @default(now()) @db.Timestamptz(6)
+  active                     Boolean  @default(false)
+  whatsapp_phone_number_id   String?
+  whatsapp_phone_number      String?
+  threshold_tokens           Int      @default(400000)
+}
+
+model pub_sub_log {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  time        DateTime @default(now()) @db.Timestamptz(6)
+  reject      Int      @default(0)
+  process     Int      @default(0)
+  errors      Int      @default(0)
+  error_types String[]
+  not_manage  Int      @default(0)
+  asked       Int      @default(0)
+
+  @@map("pub-sub-log")
+}
+
+model proposed_responses {
+  id               String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  location_id      String?    @db.Uuid
+  user_id          String?    @db.Uuid
+  reviewer_name    String?    @default("anonymous")
+  rating           String
+  comment          String?
+  create_time      DateTime?  @default(now()) @db.Timestamptz(6)
+  response         String?
+  created_at       DateTime?  @default(now()) @db.Timestamptz(6)
+  updated_at       DateTime?  @default(now()) @db.Timestamptz(6)
+  reply_url        String?
+  google_review_id String
+  locations        locations? @relation(fields: [location_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  users            users?     @relation(fields: [user_id], references: [id], onUpdate: NoAction)
+}
+
+model payments {
+  id                String         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  organization_id   String?        @db.Uuid
+  stripe_payment_id String
+  amount            Decimal        @db.Decimal
+  currency          String
+  status            String
+  created_at        DateTime?      @default(now()) @db.Timestamptz(6)
+  organizations     organizations? @relation(fields: [organization_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+model subscription_logs {
+  id               String                   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  subscription_id  String                   @db.Uuid
+  change_type      subscription_change_type
+  new_status       String?
+  new_period_start DateTime?                @db.Date
+  new_period_end   DateTime?                @db.Date
+  scheduled_for    DateTime?                @db.Timestamptz(6)
+  created_at       DateTime?                @default(now()) @db.Timestamptz(6)
+  subscriptions    subscriptions            @relation(fields: [subscription_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+
+enum onboarding_status {
+  user
+  client
+  onLocalizationPage
+  onPaymentPage
+  done
+  onLocationPage
+  onOrganizationPage
+}
+
+enum subscription_status {
+  active
+  inactive
+  cancelled
+  past_due
+  trialing
+  unpaid
+}
+
+enum user_role {
+  USER
+  CLIENT
+  VISUALIZER
+  OWNER
+}
+
+enum weekday {
+  sunday
+  monday
+  tuesday
+  wednesday
+  thursday
+  friday
+  saturday
+}
+
+enum connection_provider {
+  google
+}
+
+enum location_status {
+  active
+  inactive
+}
+
+enum sync_job_status {
+  pending
+  running
+  completed
+  failed
+}
+
+enum response_length {
+  short
+  medium
+  long
+}
+
+enum star_action {
+  reply
+  propose
+  do_not_manage
+}
+
+enum message_role {
+  employee
+  user
+  function_call
+  agent
+  system
+}
+
+enum subscription_change_type {
+  status_change
+  scheduled_change
+}
+

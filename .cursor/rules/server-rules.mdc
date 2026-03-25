@@ -1,0 +1,36 @@
+---
+description: "Reglas para server actions y server models."
+globs: ["server/**/*.{ts,tsx}"]
+---
+
+# 🗂 SERVER MODELS (Prisma)
+
+### ✔ Obligatorio:
+- Prisma solo se usa en `/server/models/**`.
+- Modelos son funciones puras de acceso a datos.
+- No realizar validaciones.
+- No incluir lógica de negocio.
+
+### 🚫 Prohibido:
+- Usar Prisma en server/actions o en componentes.
+
+---
+
+# ⚙ SERVER ACTIONS
+
+### ✔ Obligatorio:
+- Validaciones con Zod o validadores existentes.
+- Llamar a modelos para DB.
+- Orquestar flujos.
+- Mantener la lógica existente si la action ya cubre esa funcionalidad.
+
+### 🚫 Prohibido:
+- Reescribir actions críticas sin aprobación del usuario.
+- Crear nuevas actions si ya existe una equivalente.
+- Implementar modelos dentro de actions.
+
+---
+
+# 🧠 MCP / CONTEXT7
+- En caso de editar logic compleja (Paddle, Clerk, GMB, WhatsApp, etc.)  
+→ consultar documentación actualizada con Context7 antes de actuar.

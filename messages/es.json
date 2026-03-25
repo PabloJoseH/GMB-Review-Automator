@@ -1,0 +1,2053 @@
+{
+  "common": {
+    "terms": "Términos",
+    "privacy": "Política de Privacidad",
+    "termsAcceptanceBefore": "Al continuar, aceptas nuestros",
+    "termsAcceptanceAnd": "y",
+    "theme": {
+      "toggle": "Cambiar tema",
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Sistema"
+    },
+    "language": {
+      "switch": "Cambiar idioma",
+      "en": "English",
+      "es": "Español"
+    },
+    "time": {
+      "justNow": "Justo ahora",
+      "minutesAgo": "{count, plural, =1 {hace 1 min} other {hace # mins}}",
+      "hoursAgo": "{count, plural, =1 {hace 1 hora} other {hace # horas}}",
+      "daysAgo": "{count, plural, =1 {hace 1 día} other {hace # días}}"
+    },
+    "weekdays": {
+      "monday": "Lunes",
+      "tuesday": "Martes",
+      "wednesday": "Miércoles",
+      "thursday": "Jueves",
+      "friday": "Viernes",
+      "saturday": "Sábado",
+      "sunday": "Domingo"
+    },
+    "footer": {
+      "rights": "Todos los derechos reservados."
+    }
+  },
+  "auth": {
+    "errors": {
+      "missing_user_id": "ID de usuario faltante",
+      "missing_user_id_description": "Esta página requiere un enlace de registro válido desde WhatsApp. Por favor, usa el enlace proporcionado en tu conversación de WhatsApp.",
+      "invalid_user_id": "ID de usuario inválido",
+      "invalid_user_id_description": "El ID de usuario proporcionado es inválido. Por favor, usa el enlace proporcionado en tu conversación de WhatsApp.",
+      "user_id_too_long": "ID de usuario demasiado largo",
+      "user_id_too_long_description": "El ID de usuario proporcionado es demasiado largo. Por favor, usa el enlace proporcionado en tu conversación de WhatsApp.",
+      "invalid_user_id_format": "Formato de ID de usuario inválido",
+      "invalid_user_id_format_description": "El formato del ID de usuario es inválido. Por favor, usa el enlace proporcionado en tu conversación de WhatsApp.",
+      "user_is_authenticated": "Ya estás autenticado",
+      "user_is_authenticated_description": "Ya estás autenticado. Por favor, cierra sesión si necesitas acceder a esta página.",
+      "user_not_found": "Usuario No Encontrado",
+      "user_not_found_description": "Este ID no está registrado en nuestro sistema. Por favor, contacta con soporte si crees que esto es un error.",
+      "database_check_failed": "Error del Sistema",
+      "database_check_failed_description": "Estamos experimentando dificultades técnicas. Por favor, inténtalo de nuevo más tarde o contacta con soporte."
+    },
+    "signUp": {
+      "title": "Crea tu cuenta",
+      "description": "Gestiona las reseñas de tu negocio con IA",
+      "button": "Continuar con Google",
+      "buttonLoading": "Conectando...",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "signInLink": "Iniciar sesión",
+      "error": "Error",
+      "invalidLink": "Enlace de Registro Inválido",
+      "invalidLinkDescription": "Esta página requiere un enlace de registro válido desde WhatsApp. Por favor, usa el enlace proporcionado en tu conversación de WhatsApp.",
+      "userNotFound": "Usuario No Encontrado",
+      "userNotFoundDescription": "Este ID no está registrado en nuestro sistema. Por favor, contacta con soporte si crees que esto es un error.",
+      "databaseError": "Error del Sistema",
+      "databaseErrorDescription": "Estamos experimentando dificultades técnicas. Por favor, inténtalo de nuevo más tarde o contacta con soporte.",
+      "goToSignIn": "Ir a Iniciar Sesión",
+      "signOut": "Cerrar Sesión",
+      "reauthWarning": {
+        "title": "Reconexión de cuenta de Google",
+        "description": "Vas a reconectar {companyName} a una cuenta de Google diferente. Perderás la información guardada hasta ahora."
+      }
+    },
+    "signIn": {
+      "title": "Bienvenido de nuevo",
+      "description": "Inicia sesión para continuar",
+      "button": "Continuar con Google",
+      "buttonLoading": "Conectando...",
+      "noAccount": "¿No tienes una cuenta?",
+      "signUpLink": "Regístrate",
+      "error": "Error",
+      "invalidLink": "Enlace de Inicio de Sesión Inválido",
+      "invalidLinkDescription": "Esta página requiere un enlace válido de inicio de sesión desde WhatsApp. Por favor, usa el enlace proporcionado en tu conversación de WhatsApp.",
+      "userNotFound": "Usuario No Encontrado",
+      "userNotFoundDescription": "Este usuario no está registrado en nuestro sistema. Por favor, completa el proceso de registro primero.",
+      "databaseError": "Error del Sistema",
+      "databaseErrorDescription": "Estamos experimentando dificultades técnicas. Por favor, inténtalo de nuevo más tarde o contacta con soporte.",
+      "accountNotLinked": "Cuenta No Vinculada",
+      "accountNotLinkedDescription": "Tu cuenta necesita ser vinculada primero. Por favor, completa el proceso de registro desde WhatsApp.",
+      "userAlreadyExists": "La Cuenta Ya Existe",
+      "userAlreadyExistsDescription": "Esta cuenta ya existe. Por favor, inicia sesión para continuar.",
+      "accountAlreadyConnected": "Cuenta Ya Conectada",
+      "accountAlreadyConnectedDescription": "Esta cuenta de Google ya está conectada a tu perfil. Por favor, inicia sesión para continuar.",
+      "accountMismatch": "Cuenta No Coincide",
+      "accountMismatchDescription": "Tu perfil está conectado a una cuenta de Google diferente. Por favor, inicia sesión con la cuenta correcta o contáctanos por WhatsApp."
+    },
+    "signInComplete": {
+      "title": "✅ Verificación Completada",
+      "greeting": "Hola {name},",
+      "description": "Tu identidad ha sido verificada exitosamente.",
+      "returnToWhatsApp": "Volver a WhatsApp",
+      "continueInWhatsApp": "Por favor, regresa a tu conversación de WhatsApp para continuar.",
+      "user": "usuario",
+      "authFailed": "Autenticación Fallida",
+      "authFailedDescription": "No pudimos verificar tu identidad. Por favor, intenta iniciar sesión de nuevo.",
+      "authFailedHelp": "Necesitas registrarte primero. Por favor, usa el enlace de registro desde WhatsApp.",
+      "userNotFound": "Usuario No Encontrado",
+      "userNotFoundDescription": "No pudimos encontrar tu cuenta en nuestro sistema.",
+      "userNotFoundHelp": "Necesitas registrarte primero. Por favor, usa el enlace de registro desde WhatsApp.",
+      "unexpectedError": "Error Inesperado",
+      "unexpectedErrorDescription": "Algo salió mal. Por favor, inténtalo de nuevo o contacta con soporte.",
+      "tryAgain": "Intentar de Nuevo",
+      "checking": "Verificando tu cuenta...",
+      "checkingDescription": "Por favor espera mientras verificamos tu identidad y te redirigimos."
+    }
+  },
+  "onboarding": {
+    "errorBanner": {
+      "userNotFound": {
+        "title": "Usuario No Encontrado",
+        "description": "Este usuario no está registrado en nuestro sistema. Por favor, completa el proceso de registro primero."
+      },
+      "databaseError": {
+        "title": "Error del Sistema",
+        "description": "Estamos experimentando dificultades técnicas. Por favor, inténtalo de nuevo más tarde o contacta con soporte."
+      }
+    },
+    "welcome": {
+      "title": "Automatiza tus reseñas en un paso",
+      "description": "Te guiamos en una configuración corta para responder con el tono de tu marca.",
+      "benefit1": "Indícanos los datos de tu empresa para facturación",
+      "benefit2": "Selecciona las ubicaciones que quieres incluir",
+      "benefit3": "Empieza tu prueba gratis de 15 días",
+      "benefit4": "¡Listo! Las respuestas se gestionan por WhatsApp",
+      "start": "Comenzar",
+      "continue": "Continuar Registro",
+      "loading": "Cargando..."
+    },
+    "reauthLink": {
+      "question": "¿Te has confundido de cuenta de Google?",
+      "linkText": "Reconectar",
+      "dialog": {
+        "title": "Cambiar cuenta de Google",
+        "description": "Vas a reconectar tu cuenta de {companyName} a una cuenta de Google diferente. Esto te permitirá seleccionar otras ubicaciones de Google My Business.",
+        "warning": "Al reconectar, perderás todo el avance del proceso de onboarding y deberás comenzar de nuevo desde el principio.",
+        "continue": "Continuar",
+        "cancel": "Cancelar"
+      }
+    },
+    "reauthWarning": {
+      "title": "Cambio de cuenta de Google",
+      "description": "Vamos a cambiar la cuenta de Google asociada a tu usuario de {companyName}. Perderás todos los datos de localizaciones anteriores.",
+      "warningTitle": "AVISO IMPORTANTE",
+      "warningDescription": "Los datos de tu cuenta de Google anterior serán eliminados permanentemente y reemplazados por los datos de tu cuenta actual.\n\nSin embargo, los datos de tu organización, información de facturación y suscripción no se perderán: podrás editarlos en el siguiente paso y tu suscripción actual podrá modificarse con las nuevas localizaciones.",
+      "whatWillHappen": "¿Qué sucederá?",
+      "action1": "Se eliminarán los datos de tu cuenta de Google anterior",
+      "action2": "La nueva cuenta de Google que has seleccionado se vinculará a tu perfil de {companyName}",
+      "action3": "Se sincronizarán los nuevos datos de tu cuenta de Google",
+      "action4": "Comenzará el proceso de onboarding de nuevo para seleccionar las localizaciones que quieras conectar al servicio",
+      "continue": "Continuar",
+      "loading": "Procesando...",
+      "success": "Cuenta cambiada exitosamente",
+      "error": "Ocurrió un error al cambiar tu cuenta. Por favor, inténtalo de nuevo."
+    },
+    "step0": {
+      "title": "Bienvenido a {companyName}",
+      "description": "Configura la gestión de reseñas con IA en minutos"
+    },
+    "step1": {
+      "title": "Cuéntanos sobre tu empresa 🏢",
+      "description": "Esta información nos ayudará a configurar tu cuenta y generar facturas correctas",
+      "userInfo": {
+        "title": "Tu Información",
+        "description": "Por favor verifica tus datos personales",
+        "form": {
+          "name": {
+            "label": "Nombre",
+            "placeholder": "Juan",
+            "required": "El nombre es requerido",
+            "minLength": "El nombre debe tener al menos 2 caracteres"
+          },
+          "lastname": {
+            "label": "Apellidos",
+            "placeholder": "García",
+            "required": "Los apellidos son requeridos",
+            "minLength": "Los apellidos deben tener al menos 2 caracteres"
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": "juan.garcia@ejemplo.com",
+            "required": "El email es requerido",
+            "invalid": "Email inválido"
+          },
+          "phone": {
+            "label": "Teléfono",
+            "placeholder": "612 345 678",
+            "description": "Teléfono de contacto (opcional)",
+            "invalid": "Formato de teléfono inválido",
+            "disabledDescription": "Tu email y teléfono aparecen aquí pero no pueden modificarse. El email se usa para conectar tu cuenta de Google My Business y el teléfono para comunicarnos contigo por WhatsApp."
+          },
+          "country": {
+            "label": "País",
+            "placeholder": "España, Estados Unidos, México...",
+            "required": "El país es requerido",
+            "minLength": "El nombre del país debe tener al menos 2 caracteres",
+            "invalid": "Formato de nombre de país inválido"
+          },
+          "submit": {
+            "button": "Continuar",
+            "loading": "Guardando...",
+            "success": "Tu información ha sido guardada exitosamente"
+          },
+          "errors": {
+            "generic": "Ocurrió un error inesperado",
+            "userUpdateFailed": "Error al actualizar la información del usuario"
+          }
+        }
+      },
+      "form": {
+        "businessName": {
+          "label": "Nombre de la Empresa",
+          "placeholder": "Ej: Restaurante La Paella Dorada",
+          "description": "El nombre legal de tu empresa tal como aparece en documentos oficiales",
+          "required": "El nombre de la empresa es requerido",
+          "minLength": "El nombre de la empresa debe tener al menos 2 caracteres"
+        },
+        "businessId": {
+          "label": "CIF",
+          "placeholder": "B12345678",
+          "description": "Número de identificación fiscal de la empresa",
+          "required": "El CIF es obligatorio"
+        },
+        "email": {
+          "label": "Email de Facturación",
+          "placeholder": "facturas@miempresa.com",
+          "description": "Email donde recibirás las facturas",
+          "required": "El email es requerido",
+          "invalid": "Email inválido"
+        },
+        "phone": {
+          "label": "Teléfono",
+          "placeholder": "612 345 678",
+          "description": "Teléfono de contacto (opcional)",
+          "invalid": "Formato de teléfono inválido"
+        },
+        "address": {
+          "label": "Dirección de Facturación",
+          "placeholder": "Calle Gran Vía, 123, 2º A",
+          "description": "Dirección completa para facturación",
+          "required": "La dirección es requerida",
+          "minLength": "La dirección debe tener al menos 5 caracteres"
+        },
+        "city": {
+          "label": "Ciudad",
+          "placeholder": "Madrid",
+          "required": "La ciudad es requerida",
+          "minLength": "La ciudad debe tener al menos 2 caracteres"
+        },
+        "state": {
+          "label": "Estado/Provincia",
+          "placeholder": "Madrid",
+          "required": "El estado/provincia es requerido",
+          "minLength": "El estado/provincia debe tener al menos 2 caracteres"
+        },
+        "country": {
+          "label": "País",
+          "placeholder": "España, Estados Unidos, México...",
+          "required": "El país es requerido",
+          "minLength": "El nombre del país debe tener al menos 2 caracteres",
+          "invalid": "Formato de nombre de país inválido"
+        },
+        "postalCode": {
+          "label": "Código Postal",
+          "placeholder": "28001",
+          "description": "Código postal de la dirección",
+          "required": "El código postal es obligatorio"
+        },
+        "taxId": {
+          "label": "Número de IVA / Tax ID",
+          "placeholder": "ESB12345678",
+          "description": "Tu número de IVA/Tax ID empresarial (opcional). Usado para facturación y cumplimiento fiscal. En la UE, habilita reverse charge para transacciones intracomunitarias."
+        },
+        "submit": {
+          "button": "Continuar a Ubicaciones",
+          "loading": "Creando organización..."
+        },
+        "errors": {
+          "generic": "Ocurrió un error inesperado",
+          "organizationExists": "Ya tienes una organización",
+          "unauthorized": "Debes estar logueado para crear una organización",
+          "userNotFound": "Usuario no encontrado en la base de datos",
+          "businessIdTaken": "Este CIF/NIF ya está registrado. Usa otro o contacta con soporte."
+        }
+      }
+    },
+    "step2": {
+      "title": "Selecciona tus Ubicaciones",
+      "description": "Elige qué ubicaciones de Google My Business quieres conectar",
+      "sync": {
+        "success": "¡Datos de Google My Business cargados exitosamente!",
+        "successDetails": "Se encontraron {accounts} cuentas y {locations} ubicaciones.",
+        "error": "Error al cargar datos de Google My Business:",
+        "noLocations": {
+          "title": "¡Vaya! No hay ubicaciones",
+          "description": "Puede haber existido algún problema de sincronización, o puede que hayas conectado una cuenta de Google que no tiene acceso a perfiles de Google My Business.\n\nSi estás seguro de que esta es la cuenta correcta, puedes hacer clic en el botón \"Resincronizar\" para intentar sincronizar de nuevo."
+        },
+        "syncButton": {
+          "label": "Resincronizar",
+          "syncing": "Sincronizando...",
+          "success": "Ubicaciones sincronizadas con éxito.",
+          "error": "Error al sincronizar ubicaciones.",
+          "errorGeneric": "Ocurrió un error al sincronizar las ubicaciones."
+        }
+      },
+      "selection": {
+        "selectAll": "Seleccionar Todo ({selected}/{total})",
+        "selected": "{count} seleccionadas",
+        "unnamedLocation": "Ubicación Sin Nombre",
+        "backToSetup": "← Volver a Organización",
+        "continueWith": "{count, plural, =0 {Continuar con 0 Ubicaciones} =1 {Continuar con 1 Ubicación} other {Continuar con # Ubicaciones}} →",
+        "saving": "Guardando Selección...",
+        "selectAtLeastOne": "Por favor selecciona al menos una ubicación",
+        "saveError": "Error al guardar la selección de ubicaciones"
+      }
+    },
+    "step3": {
+      "title": "Configura tu Método de Pago",
+      "description": "Último paso para activar el servicio de gestión de reseñas",
+      "summary": {
+        "organization": "Resumen de la Empresa",
+        "taxId": "NIF/CIF",
+        "address": "Dirección",
+        "phone": "Teléfono"
+      },
+      "reviews": {
+        "fetching": "Obteniendo Reseñas",
+        "fetched": "Reseñas Obtenidas",
+        "fetchingDescription": "Descargando todas las reseñas de tus localizaciones seleccionadas...",
+        "fetchedDescription": "Todas las reseñas han sido descargadas y están listas para el análisis",
+        "timeoutError": "El proceso de descarga de reseñas tardó demasiado y se canceló. Puedes continuar sin problemas.",
+        "fetchError": "Hubo un problema al descargar las reseñas, pero puedes continuar con el proceso.",
+        "stats": {
+          "total": "Reseñas Totales",
+          "locations": "Localizaciones",
+          "errors": "Errores"
+        }
+      },
+      "pricing": {
+        "title": "Resumen del Plan B2B de Empresa",
+        "description": "Basado en {count} ubicación(es) seleccionada(s) para tu empresa",
+        "locationsIncluded": "Ubicaciones incluidas:",
+        "unnamedLocation": "Ubicación Sin Nombre",
+        "reviewsFetched": "Reseñas ✓",
+        "calculation": "{count} ubicación(es) × €{price}/mes",
+        "monthlyTotal": "Total mensual:",
+        "includes": "Incluye:",
+        "features": {
+          "monitoring": "Monitoreo automático de reseñas",
+          "aiResponses": "Respuestas automáticas con IA",
+          "dashboard": "Dashboard de analytics",
+          "notifications": "Notificaciones en tiempo real",
+          "whatsapp": "Integración con WhatsApp",
+          "support": "Soporte técnico incluido"
+        }
+      },
+      "payment": {
+        "title": "Método de Pago",
+        "description": "Configura tu tarjeta para activar el servicio",
+        "organizationLoading": "Cargando organización...",
+        "organizationLoadingDescription": "Estamos configurando tu organización para el procesamiento de pagos",
+        "activateSubscription": "Activar Suscripción",
+        "activateDescription": "Configura el pago para activar el servicio de gestión de reseñas para tu organización",
+        "activateButton": "Activar Plan Gratis por 15 días - {price}$/mes",
+        "processing": "Procesando...",
+        "moment": "Esto solo tomará un momento",
+      "trialInfo": "15 días gratis, luego {price}$/mes • Pago seguro a través de Stripe",
+      "encryptedByPaddle": "Encriptado por Stripe",
+      "encryptedByStripe": "Encriptado por Stripe",
+      "checkoutTitle": "Completa tu suscripción",
+      "checkoutDescription": "Revisa los detalles del plan y confirma el pago a continuación."
+      },
+      "actions": {
+        "back": "← Volver a Ubicaciones",
+        "processing": "Procesando...",
+        "retry": "Reintentar"
+      },
+      "trial": {
+        "tip": "Tip:",
+        "description": "Puedes continuar sin configurar el pago ahora y hacerlo más tarde desde el dashboard"
+      },
+      "errors": {
+        "error": "Error:",
+        "checkoutError": "No se pudo inicializar el sistema de pago. Por favor, recarga la página o contacta con soporte.",
+        "noOrganizationFound": "No se encontraron organizaciones para este usuario. Verifica que la organización se haya creado correctamente.",
+        "organizationLoadError": "Error desconocido al cargar la organización",
+        "organizationNotLoaded": "No se pudo cargar la información de la organización.",
+        "retryInstruction": "Intenta recargar la página o contacta con soporte si el problema persiste.",
+        "retry": "Reintentar",
+        "retrying": "Reintentando...",
+        "unexpectedError": "Error inesperado"
+      }
+    },
+    "complete": {
+      "title": "¡Todo Listo por aqui! 🎉",
+      "subtitle": "Tu cuenta está configurada.",
+      "subscriptionActive": "Suscripción Activada",
+      "configuration": {
+        "title": "✅ Configuración Completada",
+        "description": "Tu cuenta está lista para comenzar la personalización de las respuestas"
+      },
+      "nextSteps": {
+        "title": "¿Qué sigue?",
+        "subtitle": "Próximos pasos para comenzar a gestionar tus reseñas",
+        "step1": {
+          "title": "Configuración por WhatsApp",
+          "description": "Vas a recibir un mensaje en WhatsApp para poder configurar el tono, las instrucciones y cómo debemos gestionar tus localizaciones.",
+          "noMessage": "¿No has recibido un mensaje?",
+          "contactLink": "Entra aquí y avísanos en el chat."
+        },
+        "step2": {
+          "title": "Configura Respuestas Automáticas",
+          "description": "Personaliza el tono y estilo de las respuestas que se enviarán automáticamente"
+        },
+        "step3": {
+          "title": "¡Comienza a Funcionar!",
+          "description": "El sistema monitoreará automáticamente las nuevas reseñas y generará respuestas"
+        }
+      },
+      "accountSummary": {
+        "title": "Resumen de tu Cuenta",
+        "configured": "Configuración ✓",
+        "organization": "Prueba de 15 días ✓"
+      },
+      "support": {
+        "message": "¿Necesitas ayuda? Estamos aquí para ti 24/7",
+        "whatsappButton": "Contáctanos por WhatsApp"
+      }
+    }
+  },
+  
+  "website": {
+    "header": {
+      "cta": "Comenzar",
+      "nav": {
+        "howItWorks": "Cómo Funciona",
+        "features": "Funcionalidades",
+        "pricing": "Precios",
+        "faq": "FAQ"
+      }
+    },
+    "hero": {
+      "badge": "Gestión de Reseñas con IA",
+      "title": "Tus Reseñas de Google, Respondidas Automáticamente",
+      "description": "Deja de perder clientes por reseñas sin responder. Local Responder usa IA para crear respuestas profesionales y personalizadas. Y lo gestionas todo desde WhatsApp.",
+      "cta": "Empezar Gratis por WhatsApp",
+      "ctaSecondary": "Ver Cómo Funciona",
+      "trial": "Prueba gratis durante 15 días"
+    },
+    "socialProof": {
+      "stat1": { "value": "24/7", "label": "Monitoreo" },
+      "stat2": { "value": "<2 min", "label": "Tiempo de respuesta" },
+      "stat3": { "value": "100%", "label": "Reseñas respondidas" },
+      "stat4": { "value": "$20", "label": "Por ubicación/mes" }
+    },
+    "howItWorks": {
+      "title": "Listo en 3 Minutos",
+      "subtitle": "Sin apps que descargar. Sin paneles que aprender. Solo WhatsApp.",
+      "step1": {
+        "title": "Saluda por WhatsApp",
+        "description": "Envíanos un mensaje y nuestro asistente de IA te guía en la configuración. Sin formularios, sin contraseñas, sin descargas."
+      },
+      "step2": {
+        "title": "Conecta tu Negocio",
+        "description": "Vincula tu Perfil de Google Business con un toque. Extraemos los detalles de tu ubicación y empezamos a monitorear reseñas."
+      },
+      "step3": {
+        "title": "Relájate y Olvídate",
+        "description": "La IA escribe respuestas personalizadas y profesionales para cada nueva reseña. Aprueba cada una o déjalo en piloto automático."
+      }
+    },
+    "whatsappDemo": {
+      "title": "Todo Ocurre en WhatsApp",
+      "subtitle": "Sin apps que instalar. Sin contraseñas que recordar. Solo la app de mensajería que ya usas todos los días.",
+      "you": "Tú",
+      "ai": "Local Responder",
+      "msg1": "¡Hola! Acabo de conectar mi Perfil de Google Business. ¿Qué sigue?",
+      "msg2": "¡Bienvenido! Encontré La Pizzería de Mario (47 reseñas). Vamos a personalizar tus respuestas. ¿Qué tono va con tu marca? ¿Cercano y casual, profesional, o cálido y personal?",
+      "msg3": "¡Cercano y casual! Y que siempre mencione nuestra famosa pizza de masa madre al final 🍕",
+      "msg4": "¡Gran elección! Una cosa más: para reseñas negativas (1-2 estrellas), ¿respondo automáticamente o te envío un borrador aquí para que lo apruebes?",
+      "msg5": "Envíame borradores de las malas. Responde automático a las de 4 y 5 estrellas.",
+      "msg6": "¡Configurado! Responderé automáticamente a las positivas con tono cercano y casual mencionando tu pizza de masa madre. Para las negativas, redactaré la respuesta y te la envío aquí para aprobarla. Cambia lo que quieras en cualquier momento, solo escríbeme."
+    },
+    "features": {
+      "title": "Hecho para Dueños de Negocios Ocupados",
+      "subtitle": "No abriste tu negocio para gestionar reseñas online. Lo entendemos.",
+      "feature1": {
+        "title": "Respuestas Verdaderamente Personalizadas",
+        "description": "Elige el tono, la longitud, el idioma y añade tu propia llamada a la acción. Configura reglas diferentes para cada nivel de estrellas. La IA se adapta a tu marca, no al revés."
+      },
+      "feature2": {
+        "title": "Cero Curva de Aprendizaje",
+        "description": "Si puedes enviar un mensaje de WhatsApp, puedes usar Local Responder. Sin logins, sin paneles, sin conocimientos técnicos."
+      },
+      "feature3": {
+        "title": "Siempre Activo, Siempre Rápido",
+        "description": "Las reseñas se responden en minutos, 24/7, incluso en festivos, fines de semana y mientras duermes."
+      },
+      "feature4": {
+        "title": "Tú Mantienes el Control",
+        "description": "Para cada nivel de estrellas, decides: respuesta automática, revisar un borrador primero, o ignorar. Cambia de modo cuando quieras con un mensaje rápido por WhatsApp."
+      },
+      "feature5": {
+        "title": "Un Precio, Sin Sorpresas",
+        "description": "$20 por ubicación, respuestas ilimitadas. Sin costes ocultos, sin contratos anuales. Cancela cuando quieras."
+      },
+      "feature6": {
+        "title": "Tu Reputación, Protegida",
+        "description": "No te pierdas nunca más una reseña. Respuestas consistentes y profesionales muestran a tus clientes que te importa. Y Google también lo valora."
+      }
+    },
+    "reviewImpact": {
+      "title": "Tus Reseñas Son Tu Reputación",
+      "subtitle": "Y la mayoría de clientes no van a esperar una respuesta.",
+      "stat1": { "value": "93%", "description": "de los clientes leen reseñas online antes de visitar un negocio local" },
+      "stat2": { "value": "45%", "description": "más probabilidad de visitar un negocio que responde a sus reseñas" },
+      "stat3": { "value": "35%", "description": "más ingresos de media para negocios que responden reseñas" },
+      "source": "Basado en estudios de BrightLocal y Harvard Business Review"
+    },
+    "pricing": {
+      "title": "Un Precio Simple",
+      "subtitle": "Sin planes. Sin complejidad. Todo incluido.",
+      "badge": "Todo Incluido",
+      "price": "$20",
+      "period": "USD / ubicación / mes",
+      "feature1": "Respuestas ilimitadas con IA",
+      "feature2": "Personalizadas con la voz de tu negocio",
+      "feature3": "Monitoreo automático 24/7",
+      "feature4": "Gestión por WhatsApp",
+      "feature5": "Configuración en menos de 3 minutos",
+      "feature6": "Cancela cuando quieras, sin contratos",
+      "cta": "Empezar Ahora por WhatsApp",
+      "guarantee": "15 días de prueba gratis. Cancela cuando quieras."
+    },
+    "faq": {
+      "title": "¿Preguntas? Aquí Van las Respuestas",
+      "q1": {
+        "question": "¿Cómo funciona Local Responder?",
+        "answer": "Es simple: nos escribes por WhatsApp, conectas tu Perfil de Google Business y nuestra IA empieza a responder tus reseñas automáticamente. Todo (configuración, preferencias y gestión) ocurre por WhatsApp."
+      },
+      "q2": {
+        "question": "¿Necesito descargar una app o usar un panel?",
+        "answer": "¡No! Todo funciona por WhatsApp, la app que ya usas. Sin descargas, sin logins, sin paneles que aprender."
+      },
+      "q3": {
+        "question": "¿Puedo personalizar cómo responde la IA?",
+        "answer": "Por supuesto. Tú eliges el tono, la longitud de las respuestas, el idioma e incluso una llamada a la acción personalizada. Puedes decidir por cada nivel de estrellas si respondemos automáticamente, te enviamos un borrador, o lo ignoramos. Además, puedes añadir instrucciones especiales. Todo a través de una simple conversación por WhatsApp."
+      },
+      "q4": {
+        "question": "¿Las respuestas sonarán robóticas o genéricas?",
+        "answer": "Para nada. Cada respuesta se crea de forma única basándose en la reseña específica, el contexto de tu negocio y las preferencias de estilo que configuraste. Tus clientes no sabrán que es IA."
+      },
+      "q5": {
+        "question": "¿Puedo aprobar las respuestas antes de que se publiquen?",
+        "answer": "¡Tú eliges! Revisa y aprueba cada respuesta por WhatsApp antes de que se publique, o activa el modo piloto automático para que la IA se encargue de todo."
+      },
+      "q6": {
+        "question": "¿Mis datos están seguros?",
+        "answer": "Sí. Utilizamos cifrado estándar de la industria y solo accedemos a los datos de Google Business que autorizas explícitamente. Nunca compartimos tu información con terceros."
+      },
+      "q7": {
+        "question": "¿Puedo cancelar en cualquier momento?",
+        "answer": "Sí, sin penalizaciones. Envíanos un mensaje por WhatsApp y cancelaremos tu suscripción inmediatamente. Sin compromisos, sin letra pequeña."
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Olvidarte de las Reseñas?",
+      "subtitle": "Únete a los negocios locales que ahorran horas cada semana. La configuración toma menos de 3 minutos.",
+      "button": "Escríbenos por WhatsApp"
+    },
+    "footer": {
+      "tagline": "Gestión de reseñas con IA, tan simple como un mensaje de texto.",
+      "companyInfo": "Local Responder es un producto de Numa Labs LLC",
+      "product": "Producto",
+      "legal": "Legal",
+      "terms": "Términos de Servicio",
+      "privacy": "Política de Privacidad",
+      "contact": "Contacto",
+      "whatsapp": "Disponible 24/7 por WhatsApp",
+      "settings": "Configuración",
+      "rights": "Todos los derechos reservados."
+    }
+  },
+  "legal": {
+    "terms": {
+      "title": "Términos de Servicio",
+      "section1": {
+        "title": "1. Aceptación de los Términos"
+      },
+      "section2": {
+        "title": "2. Uso del Servicio"
+      },
+      "section3": {
+        "title": "3. Responsabilidades del Usuario"
+      }
+    },
+    "privacy": {
+      "title": "Política de Privacidad",
+      "section1": {
+        "title": "1. Información que Recopilamos"
+      },
+      "section2": {
+        "title": "2. Cómo Usamos su Información"
+      },
+      "section3": {
+        "title": "3. Protección de Datos"
+      }
+    }
+  },
+  "user": {
+    "proposedResponses": {
+      "title": "Respuestas Propuestas",
+      "subtitle": "Revisa y gestiona las respuestas propuestas antes de enviarlas a Google",
+      "subtitlePersonalized": "Hola {name}, revisa y gestiona tus {count, plural, =0 {respuestas propuestas} =1 {# respuesta propuesta} other {# respuestas propuestas}}",
+      "searchPlaceholder": "Buscar por revisor, comentario o localización...",
+      "noResults": "No se encontraron respuestas propuestas",
+      "anonymousReviewer": "Anónimo",
+      "reviewComment": "Comentario de la Reseña",
+      "proposedResponse": "Respuesta Propuesta",
+      "noResponseYet": "Aún no hay respuesta propuesta",
+      "pending": "Pendiente",
+      "filterByLocation": "Filtrar por Localización",
+      "allLocations": "Todas las Localizaciones",
+      "unnamedLocation": "Localización Sin Nombre",
+      "locationFilterTooltip": "Filtrar reseñas por localización",
+      "actions": {
+        "edit": "Editar",
+        "send": "Enviar a Google",
+        "sendSelected": "Enviar Seleccionadas",
+        "editSelected": "Editar Seleccionadas",
+        "selectedCount": "{count, plural, =1 {# seleccionada} other {# seleccionadas}}"
+      },
+      "editDialog": {
+        "title": "Editar Respuesta",
+        "description": "Edita la respuesta propuesta para esta reseña.",
+        "fields": {
+          "response": {
+            "label": "Respuesta Propuesta",
+            "placeholder": "Escribe tu respuesta...",
+            "description": "Edita la respuesta que se enviará a Google My Business."
+          }
+        },
+        "actions": {
+          "cancel": "Cancelar",
+          "save": "Guardar",
+          "saving": "Guardando..."
+        },
+        "validation": {
+          "responseRequired": "La respuesta es obligatoria"
+        },
+        "error": {
+          "updateFailed": "Error al actualizar la respuesta. Por favor, inténtalo de nuevo."
+        }
+      }
+    }
+  },
+  "backoffice": {
+    "shared": {
+      "table": {
+        "asc": "Ascendente",
+        "desc": "Descendente",
+        "hide": "Ocultar",
+        "status": "Estado",
+        "all": "Todos",
+        "clear": "Limpiar",
+        "rowsPerPage": "Filas por página",
+          "pageOf": "Página {page} de {total}",
+          "showing": "Mostrando {from} a {to} de {total} entradas",
+        "view": "Ver",
+        "toggleColumns": "Columnas",
+        "selectedCount": "{count, plural, =1 {# seleccionado} other {# seleccionados}}"
+      }
+    },
+    "nav": {
+      "dashboard": "Dashboard",
+      "conversations": "Conversaciones",
+      "connections": "Conexiones",
+      "users": "Usuarios",
+      "organizations": "Organizaciones",
+      "locations": "Localizaciones",
+      "reviews": "Reseñas",
+      "settings": "Configuración",
+      "system": "Sistema",
+      "admin": "Administración",
+      "user": {
+        "settings": "Configuración",
+        "notifications": "Notificaciones",
+        "help": "Ayuda y Soporte",
+        "logout": "Cerrar sesión"
+      }
+    },
+    "accountSettings": {
+      "title": "Configuración de Cuenta",
+      "description": "Personaliza las preferencias de tu espacio de trabajo y la visualización.",
+      "theme": {
+        "title": "Apariencia",
+        "description": "Elige cómo quieres que se vea la interfaz.",
+        "light": "Claro",
+        "dark": "Oscuro",
+        "system": "Sistema"
+      },
+      "language": {
+        "title": "Idioma",
+        "description": "Selecciona tu idioma preferido para la interfaz.",
+        "en": "English",
+        "es": "Español"
+      }
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "welcome": "Bienvenido a {companyName}",
+      "subtitle": "Gestiona tu plataforma de automatización de reseñas",
+      "recentActivity": {
+        "recentUsers": {
+          "title": "Usuarios Recientes",
+          "description": "Últimos registros de usuarios",
+          "placeholder": "Los usuarios recientes se mostrarán aquí",
+          "empty": "No hay usuarios recientes",
+          "status": {
+            "user": "Usuario",
+            "client": "Cliente",
+            "onLocalizationPage": "En Localización",
+            "onPaymentPage": "En Pago",
+            "done": "Activo",
+            "onLocationPage": "En Localización",
+            "onOrganizationPage": "En Organización"
+          }
+        },
+        "systemStatus": {
+          "title": "Estado del Sistema",
+          "description": "Métricas de salud de la plataforma",
+          "services": {
+            "database": "Base de Datos",
+            "auth": "Clerk Auth",
+            "gmb": "API GMB"
+          },
+          "status": {
+            "online": "✓ En línea",
+            "offline": "✗ Fuera de línea",
+            "degraded": "⚠ Degradado"
+          }
+        }
+      }
+    },
+    "users": {
+      "title": "Usuarios",
+      "subtitle": "Gestiona los usuarios de la plataforma",
+      "createUser": "Crear Usuario",
+      "searchPlaceholder": "Buscar por nombre, teléfono, email u organización...",
+      "noResults": "No se encontraron usuarios",
+      "empty": "No hay usuarios aún",
+      "emptyDescription": "Comienza creando tu primer usuario",
+      "table": {
+        "name": "Nombre",
+        "phone": "Teléfono",
+        "email": "Email",
+        "role": "Rol",
+        "status": "Estado",
+        "organization": "Organización",
+        "locations": "Localizaciones",
+        "reference": "ID",
+        "createdAt": "Creado",
+        "actions": "Acciones",
+        "showing": "Mostrando {from} a {to} de {total} resultados"
+      },
+      "pagination": {
+        "previous": "Anterior",
+        "next": "Siguiente",
+        "pageOf": "Página {page} de {total}"
+      },
+      "filters": {
+        "label": "Filtrar",
+        "status": "Estado",
+        "all": "Todos",
+        "done": "Completados",
+        "inProgress": "En Proceso",
+        "clear": "Limpiar filtros"
+      },
+      "roles": {
+        "USER": "Usuario",
+        "CLIENT": "Cliente",
+        "OWNER": "Dueño",
+        "VISUALIZER": "Lector",
+        "EMPLOYEE": "Empleado"
+      },
+      "status": {
+        "onboarding": {
+          "user": "Usuario",
+          "client": "Cliente",
+          "onLocationPage": "En Página de Ubicación",
+          "onOrganizationPage": "En Página de Organización",
+          "onPaymentPage": "En Página de Pago",
+          "done": "Completado"
+        },
+        "invited": "Invitado",
+        "inactive": "Inactivo"
+      },
+      "onboardingStatus": {
+        "user": "Usuario",
+        "client": "Cliente",
+        "onLocationPage": "En Página de Ubicación",
+        "onOrganizationPage": "En Página de Organización",
+        "onLocalizationPage": "En Página de Localización",
+        "onPaymentPage": "En Página de Pago",
+        "done": "Completado"
+      },
+      "locations": {
+        "activeTooltip": "{active} ubicaciones activas de {total} totales"
+      },
+      "actions": {
+        "view": "Ver Detalles",
+        "viewWhatsApp": "Ver Conversación WhatsApp",
+        "noWhatsApp": "Sin conversaciones",
+        "suspend": "Suspender",
+        "edit": "Editar",
+        "delete": "Eliminar",
+        "syncGmb": "Sincronizar GMB",
+        "verifyToken": "Verificar Token de Google",
+        "activatePubSub": "Activar Pub/Sub",
+        "syncReviews": "Sincronizar Reseñas",
+        "resendWebhook": "Reenviar Webhook N8N",
+        "markComplete": "Marcar Onboarding Completo",
+        "changeRole": "Cambiar Rol",
+        "cancel": "Cancelar",
+        "deleting": "Eliminando...",
+        "deleteSuccess": "Usuario eliminado correctamente",
+        "deleteError": "Error al eliminar el usuario",
+        "deleteConfirmTitle": "Eliminar Usuario",
+        "deleteConfirmDescription": "¿Estás seguro de que quieres eliminar este usuario? Esta acción no se puede deshacer y también eliminará el usuario de Clerk si tiene una cuenta."
+      },
+      "syncAccounts": {
+        "button": "Sincronizar cuentas",
+        "pending": "Sincronizando...",
+        "success": "Sincronización iniciada correctamente",
+        "error": "Error al iniciar la sincronización"
+      },
+      "detail": {
+        "title": "Detalles del Usuario",
+        "header": {
+          "whatsappMenu": {
+            "label": "Enviar plantilla",
+            "sendSignIn": "Enviar Login",
+            "sendSignUp": "Enviar Registro",
+            "sendReauth": "Enviar Reauth",
+            "sendProposedResponses": "Enviar Respuestas Pendientes",
+            "success": "Mensaje enviado correctamente",
+            "error": "Error al enviar el mensaje",
+            "errorNoPhone": "El usuario no tiene número de WhatsApp configurado"
+          }
+        },
+        "tabs": {
+          "info": "Información General",
+          "accounts": "Conexiones PubSub",
+          "locations": "Localizaciones",
+          "sessions": "Sesiones"
+        },
+        "actions": {
+          "title": "Opciones de Usuario",
+          "banUser": "Bloquear Usuario",
+          "unbanUser": "Desbloquear Usuario",
+          "lockUser": "Suspender Usuario",
+          "unlockUser": "Reactivar Usuario",
+          "deleteUser": "Eliminar Usuario",
+          "confirmBan": "¿Estás seguro de que quieres bloquear este usuario?",
+          "confirmUnban": "¿Estás seguro de que quieres desbloquear este usuario?",
+          "confirmLock": "¿Estás seguro de que quieres suspender este usuario?",
+          "confirmUnlock": "¿Estás seguro de que quieres reactivar este usuario?",
+          "confirmDelete": "¿Estás seguro de que quieres eliminar este usuario? Esta acción no se puede deshacer.",
+          "cancel": "Cancelar",
+          "loading": "Cargando...",
+          "success": {
+            "banned": "Usuario bloqueado exitosamente",
+            "unbanned": "Usuario desbloqueado exitosamente",
+            "locked": "Usuario suspendido exitosamente",
+            "unlocked": "Usuario reactivado exitosamente",
+            "deleted": "Usuario eliminado exitosamente"
+          },
+          "error": {
+            "banned": "Error al bloquear usuario",
+            "unbanned": "Error al desbloquear usuario",
+            "locked": "Error al suspender usuario",
+            "unlocked": "Error al reactivar usuario",
+            "deleted": "Error al eliminar usuario",
+            "noClerkId": "Falta el Clerk ID para este usuario"
+          }
+        },
+        "info": {
+          "title": "Información General",
+          "subtitle": "Detalles del usuario y organización",
+          "userInfo": "Información del Usuario",
+          "editUser": "Editar",
+          "organizationTitle": "Organización",
+          "organizationInfo": "Información de la Organización",
+          "personalInfo": "Información Personal",
+          "contactInfo": "Información de Contacto", 
+          "systemInfo": "Información del Sistema",
+          "timestamps": "Fechas",
+          "username": "Usuario",
+          "name": "Nombre",
+          "lastname": "Apellidos",
+          "email": "Email",
+          "waId": "WhatsApp",
+          "clerkId": "Clerk ID",
+          "copyClerkId": "Copiar Clerk ID",
+          "role": "Rol",
+          "onboardingStatus": "Estado Onboarding",
+          "createdAt": "Creado",
+          "updatedAt": "Actualizado",
+          "businessInfo": "Información del Negocio",
+          "statistics": "Estadísticas",
+          "businessName": "Nombre del Negocio",
+          "phone": "Teléfono",
+          "businessId": "CIF/NIF (Business ID)",
+          "taxIdentifier": "Número de Identificación Fiscal (VAT/Tax ID)",
+          "country": "País",
+          "organizationClerkId": "ID de organización en Clerk",
+          "copyOrganizationClerkId": "Copiar ID de organización en Clerk",
+          "copyPaddleId": "Copiar ID de suscripción de Stripe",
+          "address": "Dirección",
+          "noOrganization": "Este usuario no pertenece a ninguna organización todavía",
+          "subscription": {
+            "title": "Suscripción",
+            "status": "Estado",
+            "currentPeriod": "Período Actual",
+            "nextPayment": "Próximo Pago",
+            "users": "Usuarios",
+            "usersCount": "{count, plural, =0 {0 usuarios} =1 {1 usuario} other {# usuarios}}",
+            "antiquity": "Antigüedad",
+            "viewOrganization": "Ver Organización",
+            "manageSubscription": "Gestionar Suscripción",
+            "paddleId": "ID de suscripción Stripe",
+            "paddleOverlay": {
+              "button": "Iniciar suscripción Stripe",
+              "pending": "Abriendo Stripe...",
+              "description": "Gestiona la facturación de esta organización con Stripe.",
+              "noLocations": "Añade al menos una ubicación activa antes de crear una suscripción.",
+              "missingEmail": "Necesitamos el email del usuario para iniciar el pago.",
+              "missingPrice": "La tarifa de Stripe no está configurada",
+              "error": "No se pudo iniciar el checkout de Stripe",
+              "success": "Checkout listo",
+              "initError": "No se pudo inicializar el SDK de Stripe"
+            }
+          },
+          "subscriptionStatus": {
+            "active": "Activa",
+            "inactive": "Inactiva",
+            "cancelled": "Cancelada",
+            "past_due": "Vencida",
+            "trialing": "Periodo de Prueba",
+            "unpaid": "Impagada"
+          }
+        },
+        "connections": {
+          "title": "Conexiones de Google My Business",
+          "count": "{count, plural, =1 {# cuenta conectada} other {# cuentas conectadas}}",
+          "noOrganization": "Este usuario no pertenece a una organización todavía.",
+          "empty": "No hay cuentas conectadas. Conecta una cuenta de Google My Business para empezar.",
+          "createdAt": "Conectada",
+          "pubSub": "Pub/Sub",
+          "active": "Activo",
+          "inactive": "Inactivo",
+          "refreshTooltip": "Sincronizar cuenta",
+          "pubSubTooltip": "Activar/desactivar notificaciones Pub/Sub para esta cuenta",
+          "configTooltip": "Configurar conexión",
+          "externalAccountId": "ID de Cuenta",
+          "locationsCount": "Localizaciones",
+          "accountType": "Tipo de Cuenta",
+          "refreshSuccess": "Datos de cuenta actualizados correctamente",
+          "refreshError": "Error al actualizar los datos de cuenta",
+          "subscribeSuccess": "Suscrito correctamente a las notificaciones Pub/Sub",
+          "subscribeError": "Error al suscribirse a las notificaciones Pub/Sub",
+          "unsubscribeSuccess": "Desuscrito correctamente de las notificaciones Pub/Sub",
+          "unsubscribeError": "Error al desuscribirse de las notificaciones Pub/Sub",
+          "locations": {
+            "table": {
+              "name": "Localización",
+              "status": "Estado",
+              "actions": "Acciones"
+            },
+            "status": {
+              "active": "Activa",
+              "inactive": "Inactiva"
+            },
+            "actions": {
+              "view": "Ver"
+            },
+            "empty": "No hay localizaciones vinculadas a esta cuenta",
+            "pagination": {
+              "page": "Página {page} de {total}"
+            }
+          },
+          "config": {
+            "title": "Configuración de la Cuenta",
+            "description": "Gestiona la configuración de {accountId}",
+            "pubSub": {
+              "title": "Estado Pub/Sub",
+              "description": "Activa o desactiva las notificaciones Pub/Sub para eventos de cuenta",
+              "activeDescription": "Las notificaciones están activadas para esta cuenta",
+              "inactiveDescription": "Las notificaciones están desactivadas para esta cuenta"
+            },
+            "actions": {
+              "title": "Acciones"
+            },
+            "locations": {
+              "title": "Localizaciones vinculadas a esta cuenta",
+              "showing": "Mostrando {showing} de {total} localizaciones",
+              "empty": "No hay localizaciones vinculadas a esta cuenta",
+              "pagination": {
+                "page": "Página {page} de {total}"
+              }
+            },
+            "comingSoon": "Próximamente: Más opciones de configuración estarán disponibles"
+          }
+        },
+        "locations": {
+          "title": "Localizaciones",
+          "count": "{count, plural, =0 {No hay localizaciones gestionadas} =1 {# localización gestionada} other {# localizaciones gestionadas}}",
+          "noOrganization": "Este usuario no pertenece a una organización todavía.",
+          "empty": "No hay localizaciones. Añade localizaciones a través de la integración con Google My Business.",
+          "active": "Activa",
+          "inactive": "Inactiva",
+          "unnamed": "Sin nombre",
+          "noAddress": "Sin dirección",
+          "view": "Ver",
+          "website": "Website",
+          "verified": "Verificada",
+          "notVerified": "No verificada",
+          "settingsTooltip": "Configuración de respuestas IA",
+          "aiTooltip": "Configuración IA",
+          "configTooltip": "Configuración de ubicación",
+          "config": {
+            "title": "Configuración de Ubicación",
+            "description": "Gestiona la configuración de {locationName}",
+            "status": {
+              "title": "Estado de la Ubicación",
+              "description": "Activa o desactiva esta ubicación para el procesamiento de reseñas",
+              "active": "Activa",
+              "inactive": "Inactiva",
+              "activeDescription": "La ubicación está procesando reseñas automáticamente",
+              "inactiveDescription": "La ubicación no procesa reseñas automáticamente",
+              "updateSuccess": "Estado de ubicación actualizado correctamente",
+              "updateError": "Error al actualizar el estado de la ubicación"
+            },
+            "actions": {
+              "title": "Acciones",
+              "description": "Herramientas para gestionar esta ubicación",
+              "getSampleReviews": "Obtener Reseñas de Muestra",
+              "getSampleReviewsDescription": "Descarga las últimas reseñas de Google My Business",
+              "updateInfo": "Actualizar Información",
+              "updateInfoDescription": "Sincroniza datos desde Google My Business",
+              "getSampleReviewsSuccess": "Reseñas de muestra obtenidas correctamente",
+              "getSampleReviewsError": "Error al obtener reseñas de muestra",
+              "updateInfoSuccess": "Información de ubicación actualizada correctamente",
+              "updateInfoError": "Error al actualizar la información de ubicación"
+            },
+            "comingSoon": "Próximamente: Más opciones de configuración estarán disponibles"
+          }
+        },
+        "sessions": {
+          "title": "Sesiones de WhatsApp",
+          "subtitle": "Historial de conversaciones con el usuario ({count, plural, =1 {# sesión} other {# sesiones}})",
+          "empty": "No hay sesiones registradas para este usuario todavía.",
+          "error": "Error al cargar las sesiones",
+          "sessionId": "ID Sesión",
+          "createdAt": "Creada",
+          "updatedAt": "Última Actualización",
+          "messageCount": "Mensajes",
+          "lastMessage": "Último mensaje",
+          "status": "Estado",
+          "actions": "Acciones",
+          "archived": "Archivada",
+          "agentConnected": "Agente Conectado",
+          "agentDisconnected": "Agente Desconectado",
+          "recent": "Reciente",
+          "old": "Antigua",
+          "viewConversation": "Ver conversación",
+          "messageCountComing": "💡 Contador de mensajes próximamente",
+          "conversation": {
+            "title": "Conversación",
+            "loading": "Cargando mensajes...",
+            "empty": "No hay mensajes en esta conversación",
+            "retry": "Reintentar",
+            "user": "Usuario",
+            "agent": "Agente",
+            "employee": "Empleado",
+            "function": "Función",
+            "system": "Sistema",
+            "loadMore": "Cargar mensajes anteriores",
+            "loadingMore": "Cargando...",
+          "inputPlaceholder": "Escribe un mensaje...",
+          "archivedPlaceholder": "Esta conversación está archivada",
+            "agentLabel": "Agente",
+            "inputHint": "Presiona Enter para enviar • Shift+Enter para nueva línea",
+            "archivedHint": "Las conversaciones archivadas son de solo lectura",
+            "realtimeStatus": {
+              "connecting": "Conectando...",
+              "connected": "En vivo",
+              "fallback": "Sin conexión",
+              "fallbackMessage": "El tiempo real no está disponible en este momento. La conversación se actualiza cada 10 segundos."
+            }
+          }
+        },
+        "promptContext": {
+          "title": "Configuración IA",
+          "description": "Personaliza las respuestas automáticas para esta ubicación",
+          "tone": {
+            "title": "Tono de Respuesta",
+            "description": "Define el estilo de comunicación de las respuestas automáticas"
+          },
+          "responseLength": {
+            "title": "Longitud de Respuesta",
+            "short": "Corto",
+            "medium": "Medio",
+            "long": "Largo",
+            "description": "Controla la extensión de las respuestas generadas"
+          },
+          "cta": {
+            "title": "Llamada a la Acción",
+            "noCta": "Sin CTA configurado",
+            "description": "Texto personalizado para invitar a los clientes a realizar una acción"
+          },
+          "customInstructions": {
+            "title": "Instrucciones Personalizadas",
+            "placeholder": "Ej: Siempre menciona nuestro servicio premium al responder reseñas de 5 estrellas",
+            "description": "Instrucciones específicas adicionales para personalizar las respuestas de la IA"
+          },
+          "style": {
+            "title": "Estilo de Respuesta",
+            "useEmojis": "Usar Emojis",
+            "useEmojisDescription": "Incluir emojis en las respuestas automáticas",
+            "language": "Idioma",
+            "description": "Configura el estilo visual y el idioma de las respuestas"
+          },
+          "starActions": {
+            "title": "Acciones por Calificación",
+            "reply": "Responder",
+            "propose": "Proponer",
+            "do_not_manage": "No gestionar",
+            "description": "Define qué hacer con cada tipo de calificación de estrella"
+          },
+          "timestamps": {
+            "title": "Fechas",
+            "created": "Creado",
+            "updated": "Actualizado",
+            "description": "Información sobre cuándo se configuró y modificó esta configuración"
+          },
+          "save": "Guardar Cambios",
+          "saving": "Guardando...",
+          "saveSuccess": "Configuración guardada correctamente",
+          "saveError": "Error al guardar la configuración"
+        }
+      },
+      "edit": {
+        "title": "Editar Usuario",
+        "description": "Realiza cambios en el perfil del usuario. Los cambios se guardan automáticamente.",
+        "save": "Guardar Cambios",
+        "cancel": "Cancelar",
+        "saving": "Guardando...",
+        "success": "Usuario actualizado correctamente",
+        "error": "Error al actualizar el usuario",
+        "required": "requerido",
+        "sections": {
+          "personal": "Información Personal",
+          "system": "Información del Sistema"
+        },
+        "placeholders": {
+          "name": "Ingresa el nombre",
+          "lastname": "Ingresa los apellidos",
+          "email": "usuario@ejemplo.com",
+          "username": "nombre_usuario",
+          "waId": "Ingresa el número de WhatsApp"
+        }
+      },
+      "create": {
+        "title": "Crear Usuario",
+        "description": "Registra un nuevo usuario para darle acceso a la plataforma.",
+        "submit": "Crear Usuario",
+        "submitting": "Creando...",
+        "success": "Usuario creado correctamente",
+        "error": "No se pudo crear el usuario",
+        "sections": {
+          "profile": "Información Personal",
+          "system": "Información del Sistema"
+        },
+        "placeholders": {
+          "name": "Ingresa el nombre",
+          "lastname": "Ingresa los apellidos",
+          "email": "usuario@ejemplo.com",
+          "username": "nombre_usuario",
+          "waId": "Ingresa el número de WhatsApp"
+        }
+      },
+      "delete": {
+        "title": "Eliminar Usuario",
+        "description": "¿Estás seguro de que quieres eliminar este usuario? Esta acción no se puede deshacer.",
+        "confirm": "Eliminar",
+        "cancel": "Cancelar",
+        "success": "Usuario eliminado correctamente",
+        "error": "Error al eliminar el usuario"
+      }
+    },
+    "conversations": {
+      "title": "Conversaciones",
+      "subtitle": "Gestiona las conversaciones de WhatsApp",
+      "createConversation": "Nueva Conversación",
+      "searchPlaceholder": "Buscar por nombre de usuario, teléfono o ID de conversación...",
+      "noResults": "No se encontraron conversaciones",
+      "empty": "No hay conversaciones aún",
+      "emptyDescription": "Las conversaciones aparecerán aquí cuando los usuarios interactúen",
+      "table": {
+        "user": "Usuario",
+        "phone": "Teléfono",
+        "messageCount": "Mensajes",
+        "tokens": "Tokens",
+        "status": "Estado",
+        "agentManaged": "Gestionado por Agente",
+        "employeeManaged": "Gestionado por Empleado",
+        "agentConnected": "Agente Conectado",
+        "agentDisconnected": "Agente Desconectado",
+        "archived": "Archivada",
+        "lastMessage": "Último mensaje",
+        "createdAt": "Creada",
+        "updatedAt": "Actualizada",
+        "actions": "Acciones"
+      },
+      "actions": {
+        "view": "Ver Mensajes",
+        "archive": "Archivar",
+        "changeAgent": "Cambiar Agente"
+      }
+    },
+    "connections": {
+      "title": "Conexiones",
+      "subtitle": "Gestiona las conexiones de Google Business Profile",
+      "searchPlaceholder": "Buscar por ID de cuenta externa, tipo o usuario...",
+      "noResults": "No se encontraron conexiones",
+      "empty": "No hay conexiones aún",
+      "emptyDescription": "Las conexiones aparecerán aquí cuando los usuarios vinculen sus cuentas de Google",
+      "table": {
+        "provider": "Proveedor",
+        "externalAccountId": "ID de Cuenta Externa",
+        "type": "Tipo",
+        "pubSub": "Pub/Sub",
+        "active": "Activo",
+        "inactive": "Inactivo",
+        "user": "Usuario",
+        "locationCount": "Localizaciones",
+        "createdAt": "Fecha de Creación",
+        "actions": "Acciones"
+      },
+      "actions": {
+        "configure": "Configurar",
+        "refresh": "Actualizar Información",
+        "bulkRefresh": "Actualizar Seleccionadas",
+        "bulkConfigure": "Configurar Seleccionadas"
+      }
+    },
+    "reviews": {
+      "title": "Reseñas de Prueba",
+      "subtitle": "Reseñas almacenadas mientras no se está respondiendo en Google My Business",
+      "searchPlaceholder": "Buscar por autor, comentario o respuesta...",
+      "noResults": "No se encontraron reseñas",
+      "empty": "No hay reseñas de prueba aún",
+      "emptyDescription": "Las reseñas de prueba aparecerán aquí",
+      "table": {
+        "author": "Autor",
+        "anonymous": "Anónimo",
+        "rating": "Calificación",
+        "location": "Localización",
+        "unknownLocation": "Localización desconocida",
+        "hasComment": "Comentario",
+        "withComment": "Con comentario",
+        "noComment": "Sin comentario",
+        "reviewDate": "Fecha de Reseña",
+        "actions": "Acciones"
+      },
+      "filters": {
+        "commentStatus": "Estado del Comentario",
+        "withComment": "Con comentario",
+        "noComment": "Sin comentario",
+        "rating": "Calificación",
+        "star1": "1 estrella",
+        "star2": "2 estrellas",
+        "star3": "3 estrellas",
+        "star4": "4 estrellas",
+        "star5": "5 estrellas"
+      },
+      "actions": {
+        "view": "Ver Detalles",
+        "export": "Exportar",
+        "delete": "Eliminar"
+      },
+      "detail": {
+        "title": "Detalles de la Reseña",
+        "description": "Información completa de la reseña",
+        "reviewInfo": "Información de la Reseña",
+        "author": "Autor",
+        "anonymous": "Anónimo",
+        "location": "Localización",
+        "unknownLocation": "Localización desconocida",
+        "rating": "Calificación",
+        "reviewDate": "Fecha de Reseña",
+        "comment": "Comentario",
+        "noComment": "Sin comentario",
+        "ourResponse": "Nuestra Respuesta",
+        "response": "Respuesta",
+        "noResponse": "No se envió respuesta",
+        "aiConfiguration": "Configuración de IA Utilizada",
+        "modelInstructions": "Instrucciones del Modelo",
+        "promptTone": "Tono del Prompt",
+        "handleOneStar": "Manejo de 1 Estrella",
+        "promptInstructions": "Instrucciones del Prompt",
+        "noInstructions": "Sin instrucciones",
+        "viewFull": "Ver texto completo",
+        "timestamps": "Marcas de Tiempo",
+        "createdAt": "Creado",
+        "updatedAt": "Actualizado"
+      }
+    },
+    "organizations": {
+      "title": "Organizaciones",
+      "subtitle": "Gestiona las organizaciones de clientes",
+      "createOrganization": "Crear Organización",
+      "searchPlaceholder": "Buscar por nombre, email o ID...",
+      "noResults": "No se encontraron organizaciones",
+      "empty": "No hay organizaciones aún",
+      "emptyDescription": "Las organizaciones aparecerán aquí cuando los usuarios completen el onboarding",
+      "table": {
+        "name": "Nombre de Empresa",
+        "country": "País",
+        "subscription": "Suscripción",
+        "renewalDate": "Fecha de Renovación",
+        "locations": "Localizaciones",
+        "users": "Usuarios",
+        "reference": "ID",
+        "createdAt": "Antigüedad",
+        "actions": "Acciones",
+        "noSubscription": "Sin Suscripción",
+        "locationsTooltip": "Localizaciones:",
+        "subscriptionStatus": {
+          "active": "Activa",
+          "inactive": "Inactiva",
+          "cancelled": "Cancelada",
+          "canceled": "Cancelada",
+          "past_due": "Vencida",
+          "paused": "Pausada",
+          "trialing": "Periodo de Prueba",
+          "unpaid": "Sin Pagar"
+        }
+      },
+      "actions": {
+        "view": "Ver Detalles",
+        "edit": "Editar",
+        "delete": "Eliminar",
+        "viewWhatsApp": "Ver WhatsApp",
+        "noWhatsApp": "Sin conversaciones",
+        "cancel": "Cancelar",
+        "deleting": "Eliminando...",
+        "deleteSuccess": "Organización eliminada correctamente",
+        "deleteError": "Error al eliminar la organización",
+        "deleteConfirmTitle": "Eliminar Organización",
+        "deleteConfirmTitleMultiple": "Eliminar Organizaciones",
+        "deleteConfirmDescription": "¿Estás seguro de que quieres eliminar esta organización? Esta acción no se puede deshacer y también cancelará cualquier suscripción activa.",
+        "deleteConfirmDescriptionMultiple": "¿Estás seguro de que quieres eliminar estas organizaciones? Esta acción no se puede deshacer y también cancelará cualquier suscripción activa."
+      },
+      "locations": {
+        "activeTooltip": "{active} activas de {total} localizaciones totales"
+      },
+      "usersCountTooltip": "{count} usuarios en esta organización",
+      "edit": {
+        "title": "Editar Organización",
+        "description": "Realiza cambios en la información de la organización. Los cambios se guardan automáticamente.",
+        "save": "Guardar Cambios",
+        "cancel": "Cancelar",
+        "saving": "Guardando...",
+        "success": "Organización actualizada correctamente",
+        "error": "Error al actualizar la organización",
+        "required": "requerido",
+        "sections": {
+          "business": "Información de Negocio",
+          "address": "Información de Dirección",
+          "structuredAddress": "O usar campos estructurados de dirección"
+        },
+        "fields": {
+          "firstLine": "Primera línea de dirección"
+        },
+        "placeholders": {
+          "businessName": "Ingresa el nombre de la empresa",
+          "email": "empresa@ejemplo.com",
+          "phone": "+34 123 456 789",
+          "businessId": "B12345678",
+          "taxId": "ESB12345678",
+          "country": "ES",
+          "address": "Calle Principal 123",
+          "firstLine": "Calle Principal 123",
+          "city": "Madrid",
+          "region": "Madrid",
+          "zipCode": "28001"
+        }
+      },
+      "detail": {
+        "title": "Detalles de la Organización",
+        "tabs": {
+          "info": "Información",
+          "users": "Usuarios",
+          "locations": "Localizaciones",
+          "payments": "Pagos"
+        },
+        "info": {
+          "basicInfo": "Información Básica",
+          "businessInfo": "Información de Negocio",
+          "systemInfo": "Información del Sistema",
+          "businessName": "Nombre de Empresa",
+          "businessId": "NIF/CIF",
+          "taxId": "Número de IVA / Tax ID",
+          "email": "Email",
+          "phone": "Teléfono",
+          "address": "Dirección",
+          "city": "Ciudad",
+          "state": "Provincia/Estado",
+          "country": "País",
+          "postalCode": "Código Postal",
+          "clerkOrgId": "ID de Organización Clerk",
+          "createdAt": "Creado el",
+          "updatedAt": "Actualizado el",
+          "copyClerkOrgId": "Copiar ID de Organización Clerk",
+          "editOrganization": "Editar",
+          "subscription": {
+            "title": "Suscripción",
+            "status": "Estado",
+            "paddleId": "ID de Suscripción Stripe",
+            "copyPaddleId": "Copiar ID de Suscripción",
+            "currentPeriod": "Periodo Actual",
+            "nextPayment": "Próximo Pago",
+            "activeLocations": "Localizaciones Activas",
+            "users": "Usuarios",
+            "usersCount": "{count, plural, =1 {# usuario} other {# usuarios}}",
+            "antiquity": "Antigüedad",
+            "createdAt": "Suscripción creada"
+          },
+          "subscriptionStatus": {
+            "active": "Activa",
+            "inactive": "Inactiva",
+            "cancelled": "Cancelada",
+            "canceled": "Cancelada",
+            "past_due": "Vencida",
+            "paused": "Pausada",
+            "trialing": "Periodo de Prueba",
+            "unpaid": "Sin Pagar"
+          },
+          "statistics": "Estadísticas"
+        },
+        "users": {
+          "title": "Usuarios",
+          "subtitle": "{count, plural, =1 {# usuario en esta organización} other {# usuarios en esta organización}}",
+          "empty": "No se encontraron usuarios",
+          "error": "Error al cargar usuarios",
+          "table": {
+            "name": "Nombre",
+            "email": "Email",
+            "role": "Rol",
+            "createdAt": "Creado",
+            "actions": "Acciones",
+            "view": "Ver"
+          }
+        },
+        "locations": {
+          "title": "Localizaciones",
+          "count": "{count, plural, =1 {# localización} other {# localizaciones}}",
+          "empty": "No se encontraron localizaciones",
+          "active": "Activa",
+          "inactive": "Inactiva",
+          "unnamed": "Localización Sin Nombre",
+          "noCategory": "Sin Categoría",
+          "noAddress": "Sin Dirección",
+          "view": "Ver Detalles",
+          "configTooltip": "Configuración de ubicación",
+          "settingsTooltip": "Configuración de respuestas IA"
+        },
+        "payments": {
+          "title": "Pagos",
+          "count": "{count, plural, =1 {# pago} other {# pagos}}",
+          "empty": "No se encontraron pagos",
+          "table": {
+            "title": "Historial de Pagos",
+            "paddlePaymentId": "ID de Pago Stripe",
+            "amount": "Importe",
+            "currency": "Moneda",
+            "status": "Estado",
+            "createdAt": "Fecha",
+            "actions": "Acciones"
+          },
+          "status": {
+            "draft": "Borrador",
+            "ready": "Listo",
+            "billed": "Facturado",
+            "paid": "Pagado",
+            "completed": "Completado",
+            "past_due": "Vencido",
+            "canceled": "Cancelado",
+            "cancelled": "Cancelado",
+            "error": "Error",
+            "pending": "Pendiente",
+            "failed": "Fallido",
+            "refunded": "Reembolsado"
+          },
+          "actions": {
+            "viewDetails": "Ver Detalles",
+            "downloadInvoice": "Descargar Factura",
+            "copyPaymentId": "Copiar ID de Pago"
+          },
+          "detail": {
+            "title": "Detalles del Pago",
+            "description": "Información detallada del pago para {organizationName}",
+            "status": {
+              "title": "Estado"
+            },
+            "info": {
+              "title": "Información del Pago",
+              "paddlePaymentId": "ID de Pago Stripe",
+              "totalAmount": "Importe Total",
+              "createdAt": "Fecha de Creación"
+            },
+            "organization": {
+              "title": "Información de la Organización",
+              "name": "Nombre de Empresa",
+              "clerkId": "ID de Organización Clerk"
+            }
+          }
+        }
+      }
+    },
+    "locations": {
+      "title": "Localizaciones",
+      "subtitle": "Gestiona las localizaciones de Google My Business",
+      "searchPlaceholder": "Buscar por nombre, ciudad, país u organización...",
+      "noResults": "No se encontraron localizaciones",
+      "empty": "No hay localizaciones aún",
+      "emptyDescription": "Las localizaciones aparecerán aquí cuando los usuarios conecten sus cuentas GMB",
+      "table": {
+        "name": "Nombre de Localización",
+        "location": "Ciudad",
+        "organization": "Organización",
+        "status": "Estado",
+        "reference": "ID",
+        "createdAt": "Antigüedad",
+        "actions": "Acciones"
+      },
+      "status": {
+        "active": "Activo",
+        "inactive": "Inactivo",
+        "pending": "Pendiente"
+      },
+      "subscription": {
+        "active": "Activa",
+        "inactive": "Inactiva",
+        "cancelled": "Cancelada",
+        "past_due": "Vencida"
+      },
+      "actions": {
+        "view": "Ver Detalles",
+        "edit": "Editar",
+        "delete": "Eliminar",
+        "deactivate": "Desactivar",
+        "activate": "Activar",
+        "addLocation": "Agregar Localización",
+        "changeStatus": "Cambiar Estado",
+        "update": "Actualizar"
+      },
+      "detail": {
+        "title": "Detalles de la Localización",
+        "configureLocation": "Configurar ubicación",
+        "tabs": {
+          "info": "Información",
+          "proposedResponses": "Respuestas Pendientes",
+          "promptContext": "Contexto de Prompt"
+        },
+        "proposedResponses": {
+          "empty": "No hay respuestas pendientes",
+          "table": {
+            "date": "Fecha",
+            "reviewer": "Reseñador",
+            "rating": "Calificación",
+            "comment": "Comentario",
+            "response": "Respuesta",
+            "actions": "Acciones",
+            "anonymous": "Anónimo",
+            "noResponse": "Sin respuesta"
+          },
+          "actions": {
+            "delete": "Eliminar",
+            "deleteSelected": "Eliminar Seleccionadas",
+            "view": "Ver Detalle"
+          },
+          "deleteDialog": {
+            "title": "Eliminar Respuestas",
+            "description": "¿Estás seguro de que quieres eliminar {count, plural, =1 {la respuesta seleccionada} other {las # respuestas seleccionadas}}? Esta acción no se puede deshacer.",
+            "cancel": "Cancelar",
+            "confirm": "Eliminar",
+            "deleting": "Eliminando..."
+          }
+        },
+        "info": {
+          "basicInfo": "Información Básica",
+          "locationDetails": "Detalles de la Localización",
+          "contactInfo": "Información de Contacto",
+          "systemInfo": "Información del Sistema",
+          "organizationInfo": "Organización",
+          "name": "Nombre",
+          "address": "Dirección",
+          "category": "Categoría",
+          "status": "Estado",
+          "active": "Activa",
+          "inactive": "Inactiva",
+          "verified": "Verificada",
+          "yes": "Sí",
+          "no": "No",
+          "phone": "Teléfono",
+          "website": "Sitio Web",
+          "googleLocationId": "ID de Localización Google",
+          "createdBy": "Creado Por",
+          "createdAt": "Creado el",
+          "updatedAt": "Actualizado el",
+          "organization": "Organización",
+          "organizationName": "Nombre de Organización",
+          "connectionId": "ID de Conexión",
+          "viewOrganization": "Ver Organización",
+          "noOrganization": "No hay organización asociada",
+          "openingHours": "Horarios de Apertura",
+          "from": "Desde",
+          "until": "Hasta",
+          "promptContext": "Contexto del Prompt",
+          "tone": "Tono",
+          "responseLength": "Longitud de Respuesta",
+          "language": "Idioma",
+          "useEmojis": "Usar Emojis",
+          "statistics": "Estadísticas",
+          "stats": {
+            "totalReviews": "Total de Reseñas",
+            "averageRating": "Calificación Promedio",
+            "responseRate": "Tasa de Respuesta",
+            "reviewsWithResponse": "Con Respuesta",
+            "withResponse": "Con Respuesta"
+          },
+          "editLocation": "Editar",
+          "addressAndContact": "Dirección y Contacto",
+          "updatedBy": "Actualizado Por",
+          "reviewsProcessed": "Reseñas Procesadas",
+          "organizationEmail": "Email de Organización",
+          "organizationPhone": "Teléfono de Organización",
+          "activeLocations": "Localizaciones Activas",
+          "reviewStats": "Estadísticas de Reseñas"
+        },
+        "reviews": {
+          "title": "Reseñas de Ejemplo",
+          "subtitle": "{count, plural, =1 {# reseña encontrada} other {# reseñas encontradas}}",
+          "empty": "No se encontraron reseñas",
+          "error": "Error al cargar reseñas",
+          "table": {
+            "author": "Autor",
+            "rating": "Calificación",
+            "comment": "Comentario",
+            "response": "Respuesta",
+            "date": "Fecha",
+            "actions": "Acciones",
+            "anonymous": "Anónimo",
+            "noResponse": "Sin respuesta aún",
+            "view": "Ver Detalles"
+          },
+          "dialog": {
+            "title": "Detalles de la Reseña",
+            "description": "Información completa de la reseña",
+            "reviewDate": "Fecha de Reseña",
+            "comment": "Comentario",
+            "noComment": "Sin comentario",
+            "response": "Respuesta",
+            "createdAt": "Creado el",
+            "updatedAt": "Actualizado el",
+            "anonymous": "Anónimo"
+          },
+          "pagination": {
+            "showing": "Mostrando {from} a {to} de {total} entradas",
+            "pageOf": "Página {page} de {total}"
+          }
+        },
+        "pending": {
+          "title": "Reseñas Pendientes",
+          "subtitle": "Reseñas que esperan respuesta",
+          "placeholder": {
+            "title": "Funcionalidad No Implementada",
+            "description": "Esta funcionalidad está en desarrollo",
+            "message": "La funcionalidad de reseñas pendientes estará disponible pronto. Esta sección mostrará las reseñas que requieren respuestas.",
+            "todo": "TODO: Implementar lógica de obtención y visualización de reseñas pendientes"
+          }
+        },
+        "stats": {
+          "title": "Estadísticas de Reseñas",
+          "subtitle": "Analíticas y métricas para esta localización",
+          "totalReviews": "Total de Reseñas",
+          "totalReviewsDescription": "Número total de reseñas",
+          "averageRating": "Calificación Promedio",
+          "averageRatingDescription": "Calificación promedio de todas las reseñas",
+          "responseRate": "Tasa de Respuesta",
+          "responseRateDescription": "Porcentaje de reseñas con respuestas",
+          "reviewsWithResponse": "Con Respuesta",
+          "reviewsWithResponseDescription": "Reseñas que han sido respondidas",
+          "reviewsWithoutResponse": "Sin Respuesta",
+          "reviewsWithoutResponseDescription": "Reseñas que esperan respuesta",
+          "reviewsProcessed": "Procesadas",
+          "reviewsProcessedDescription": "Total de reseñas procesadas por el sistema",
+          "ratingDistribution": "Distribución de Calificaciones"
+        },
+        "promptContext": {
+          "title": "Configuración de IA",
+          "description": "Personaliza las respuestas automáticas para esta localización",
+          "configuration": "Configuración",
+          "configured": "El contexto de prompt está configurado para esta localización",
+          "notConfigured": "No hay contexto de prompt configurado aún",
+          "edit": "Editar Configuración",
+          "configure": "Configurar",
+          "tone": {
+            "title": "Tono de Respuesta",
+            "description": "Define el estilo de comunicación de las respuestas automáticas",
+            "placeholder": "Ej.: Amigable y profesional, manteniendo un tono cercano pero respetuoso"
+          },
+          "responseLength": {
+            "title": "Longitud de Respuesta",
+            "short": "Corta",
+            "medium": "Media",
+            "long": "Larga",
+            "description": "Controla la longitud de las respuestas generadas"
+          },
+          "cta": {
+            "title": "Llamada a la Acción",
+            "noCta": "No hay CTA configurado",
+            "description": "Texto personalizado para invitar a los clientes a tomar acción"
+          },
+          "customInstructions": {
+            "title": "Instrucciones Personalizadas",
+            "placeholder": "Ej: Siempre menciona nuestro servicio premium al responder reseñas de 5 estrellas",
+            "description": "Instrucciones específicas adicionales para personalizar las respuestas de la IA"
+          },
+          "style": {
+            "title": "Estilo de Respuesta",
+            "useEmojis": "Usar Emojis",
+            "useEmojisDescription": "Incluir emojis en las respuestas automáticas",
+            "language": "Idioma",
+            "languagePlaceholder": "Ej.: español, inglés, automático"
+          },
+          "starActions": {
+            "title": "Acciones por Calificación",
+            "reply": "Responder",
+            "propose": "Proponer",
+            "do_not_manage": "No gestionar",
+            "description": "Define qué hacer con cada tipo de calificación por estrellas"
+          },
+          "timestamps": {
+            "title": "Fechas",
+            "created": "Creado",
+            "updated": "Actualizado"
+          },
+          "save": "Guardar Cambios",
+          "saving": "Guardando...",
+          "saveSuccess": "Contexto de prompt guardado exitosamente",
+          "saveError": "Error al guardar el contexto de prompt",
+          "yes": "Sí",
+          "no": "No",
+          "exampleReviews": {
+            "title": "Reseñas de Ejemplo",
+            "subtitle": "Reseñas descargadas de Google My Business para configurar el contexto de prompt",
+            "empty": "No hay reseñas de ejemplo",
+            "emptyDescription": "Las reseñas de ejemplo aparecerán aquí cuando se descarguen desde Google My Business",
+            "fetchReviews": "Recuperar Reseñas",
+            "table": {
+              "date": "Fecha",
+              "author": "Autor",
+              "rating": "Calificación",
+              "comment": "Comentario",
+              "response": "Respuesta",
+              "actions": "Acciones",
+              "anonymous": "Anónimo",
+              "noResponse": "Sin respuesta",
+              "view": "Ver detalle"
+            },
+            "actions": {
+              "delete": "Eliminar",
+              "deleteSelected": "Eliminar Seleccionadas",
+              "view": "Ver Detalle"
+            },
+            "deleteDialog": {
+              "title": "Eliminar Reseñas",
+              "description": "¿Estás seguro de que quieres eliminar {count, plural, =1 {la reseña seleccionada} other {las # reseñas seleccionadas}}? Esta acción no se puede deshacer.",
+              "cancel": "Cancelar",
+              "confirm": "Eliminar",
+              "deleting": "Eliminando..."
+            }
+          }
+        }
+      },
+      "edit": {
+        "title": "Editar Localización",
+        "description": "Realiza cambios en la información de la localización. Los cambios se guardan automáticamente.",
+        "save": "Guardar Cambios",
+        "cancel": "Cancelar",
+        "saving": "Guardando...",
+        "success": "Localización actualizada correctamente",
+        "error": "Error al actualizar la localización",
+        "sections": {
+          "basic": "Información Básica",
+          "address": "Dirección",
+          "contact": "Información de Contacto"
+        },
+        "fields": {
+          "addressLine1": "Dirección Línea 1",
+          "addressLine2": "Dirección Línea 2",
+          "city": "Ciudad",
+          "postalCode": "Código Postal",
+          "region": "Región/Provincia",
+          "country": "País (código ISO)"
+        },
+        "placeholders": {
+          "name": "Ingresa el nombre de la localización",
+          "category": "Ej: restaurant, hotel, store",
+          "addressLine1": "Calle y número",
+          "addressLine2": "Piso, apartamento, edificio",
+          "city": "Ciudad",
+          "postalCode": "28001",
+          "region": "Madrid",
+          "country": "ES",
+          "phone": "+34 XXX XXX XXX",
+          "website": "https://ejemplo.com"
+        },
+        "refreshInfo": {
+          "button": "Recuperar Información de Google",
+          "description": "Actualiza la información de esta localización desde Google My Business",
+          "loading": "Recuperando...",
+          "todo": "Funcionalidad en desarrollo: próximamente podrás actualizar la información desde Google automáticamente"
+        }
+      }
+    },
+    "stats": {
+      "totalUsers": "Total de Usuarios",
+      "platformUsers": "Usuarios de la plataforma",
+      "organizations": "Organizaciones",
+      "activeOrganizations": "Organizaciones activas",
+      "locations": "Localizaciones",
+      "connectedGmbLocations": "Localizaciones GMB conectadas",
+      "responses": "Respuestas",
+      "automatedResponses": "Respuestas automáticas enviadas"
+    },
+    "settings": {
+      "title": "Configuración",
+      "subtitle": "Configuración del sistema y respuestas de IA",
+      "noSubscription": "Sin Suscripción",
+      "active": {
+        "title": "Configuración activa",
+        "subtitleDate": "Creada: {date}",
+        "loading": "Cargando configuración...",
+        "savedDraft": "Borrador guardado",
+        "saveError": "Error al guardar el borrador",
+        "saveDraft": "Guardar como borrador",
+        "fields": {
+          "responderModel": "Modelo respuestas GMB",
+          "responderMaxTokens": "Máx. tokens respuestas GMB",
+          "onboardingModel": "Modelo WhatsApp",
+          "onboardingMaxTokens": "Máx. tokens WhatsApp",
+          "responderInstructions": "Instrucciones respuestas GMB",
+          "responderResponseFormat": "Formato respuestas GMB",
+          "responderProduction": "Modo Producción GMB",
+          "responderProductionDescription": "Activar modo producción para el respondedor de reseñas GMB",
+          "onboardingInstructions": "Instrucciones WhatsApp",
+          "onboardingResponseFormat": "Formato respuesta WhatsApp",
+          "thresholdTokens": "Umbral tokens WhatsApp",
+          "thresholdTokensDescription": "Tokens a partir de los que el sistema crea un resumen de la conversación y una nueva sesión",
+          "whatsappPhoneNumberId": "ID de número de WhatsApp",
+          "whatsappPhoneNumber": "Número de WhatsApp",
+          "createdAt": "Creada",
+          "updatedAt": "Actualizada"
+        },
+        "tabs": {
+          "general": "General",
+          "responder": "Respuestas GMB",
+          "onboarding": "WhatsApp"
+        },
+        "general": {
+          "info": {
+            "title": "Cómo Funciona la Gestión de Configuraciones",
+            "description": "Esta página te permite gestionar las configuraciones del sistema de forma segura. Los cambios se guardan como borradores y requieren activación manual para prevenir actualizaciones accidentales.",
+            "step1": "La tarjeta superior muestra tu configuración activa actual, que está siendo utilizada por el sistema.",
+            "step2": "Cuando modificas cualquier configuración y haces clic en 'Guardar como borrador', se crea una nueva configuración inactiva. Tu configuración activa permanece sin cambios.",
+            "step3": "Para activar una configuración borrador, desplázate hacia abajo a la tabla 'Todas las configuraciones', abre la configuración que deseas activar y haz clic en el botón 'Activar'. Esto asegura que revises los cambios antes de que se apliquen."
+          }
+        },
+        "instructionsDialog": {
+          "viewTitle": "Ver en ventana más grande",
+          "editTitle": "Editar en ventana más grande",
+          "cancel": "Cancelar",
+          "save": "Guardar",
+          "close": "Cerrar",
+          "noContent": "Sin contenido",
+          "placeholder": "Ingresa contenido..."
+        },
+        "production": {
+          "enableTitle": "Activar Modo Producción",
+          "enableDescription": "¿Estás seguro de que quieres activar el modo producción para el respondedor de reseñas? Esto activará el respondedor para todos los usuarios.",
+          "disableTitle": "Desactivar Modo Producción",
+          "disableDescription": "¿Estás seguro de que quieres desactivar el modo producción? Esto desactivará el respondedor para todos los usuarios.",
+          "enableConfirm": "Activar Producción",
+          "disableConfirm": "Desactivar Producción",
+          "cancel": "Cancelar"
+        },
+        "productionEnabled": "Modo producción activado",
+        "productionDisabled": "Modo producción desactivado"
+      },
+      "configs": {
+        "title": "Todas las configuraciones",
+        "empty": "No hay configuraciones",
+        "configTitle": "Configuración",
+        "viewTitle": "Configuración {id}",
+        "viewDescription": "Ver detalles de la configuración y activarla",
+        "loading": "Cargando...",
+        "generalInfo": "Información General",
+        "timestamps": "Fechas",
+        "activating": "Activando",
+        "loadError": "Error al cargar la configuración",
+        "close": "Cerrar",
+        "activate": "Activar",
+        "activated": "Configuración activada",
+        "activateError": "Error al activar la configuración",
+        "tokens": "tokens",
+        "enabled": "Habilitado",
+        "disabled": "Deshabilitado",
+        "notConfigured": "No configurado",
+        "noInstructions": "Sin instrucciones",
+        "table": {
+          "columns": {
+            "createdAt": "Creada",
+            "responderModel": "Modelo de respuestas",
+            "onboardingModel": "Modelo de onboarding",
+            "status": "Estado",
+            "active": "Activa",
+            "inactive": "Inactiva",
+            "review": "Revisar"
+          }
+        }
+      },
+      "tabs": {
+        "general": "General",
+        "responder": "Respondedor de Reseñas",
+        "onboarding": "Bot de Onboarding",
+        "system": "Estado del Sistema"
+      },
+      "general": {
+        "title": "Configuración General",
+        "description": "Configura las preferencias generales del sistema y configuraciones globales",
+        "companyName": "Nombre de la Empresa",
+        "companyNamePlaceholder": "Ingresa el nombre de tu empresa",
+        "defaultLanguage": "Idioma por Defecto",
+        "defaultLanguageDescription": "Idioma por defecto para las respuestas de IA",
+        "maxResponseLength": "Longitud Máxima de Respuesta",
+        "maxResponseLengthDescription": "Máximo de caracteres para respuestas generadas por IA",
+        "saveChanges": "Guardar Cambios",
+        "changesSaved": "Cambios guardados exitosamente"
+      },
+      "responder": {
+        "title": "Configuración del Respondedor de Reseñas",
+        "description": "Configura el comportamiento de las respuestas de IA para respuestas a reseñas",
+        "defaultTone": "Tono de Respuesta por Defecto",
+        "defaultToneDescription": "Tono por defecto para respuestas generadas por IA",
+        "defaultLanguage": "Idioma de Respuesta por Defecto",
+        "defaultLanguageDescription": "Código de idioma por defecto para respuestas (ej., es-ES, en-US)",
+        "maxResponseLength": "Longitud Máxima de Respuesta",
+        "maxResponseLengthDescription": "Máximo de caracteres para respuestas a reseñas",
+        "requireAction": "Requerir Acción Manual",
+        "requireActionDescription": "Si las respuestas deben requerir revisión manual antes de publicar",
+        "defaultTags": "Etiquetas por Defecto",
+        "defaultTagsDescription": "Etiquetas por defecto para aplicar a las respuestas",
+        "availableTags": {
+          "apology": "Disculpa",
+          "thanks": "Agradecimiento",
+          "empathy": "Empatía",
+          "service_recovery": "Recuperación de Servicio",
+          "policy_violation": "Violación de Política",
+          "spam_suspected": "Spam Sospechado"
+        },
+        "saveChanges": "Guardar Configuración del Respondedor",
+        "changesSaved": "Configuración del respondedor guardada exitosamente"
+      },
+      "onboarding": {
+        "title": "Configuración del Bot de Onboarding",
+        "description": "Configura el comportamiento del chatbot de onboarding",
+        "welcomeMessage": "Mensaje de Bienvenida",
+        "welcomeMessageDescription": "Mensaje inicial enviado a nuevos usuarios",
+        "welcomeMessagePlaceholder": "¡Bienvenido! Empecemos...",
+        "defaultLanguage": "Idioma por Defecto",
+        "defaultLanguageDescription": "Idioma por defecto para conversaciones de onboarding",
+        "maxSteps": "Pasos Máximos de Onboarding",
+        "maxStepsDescription": "Número máximo de pasos en el flujo de onboarding",
+        "saveChanges": "Guardar Configuración de Onboarding",
+        "changesSaved": "Configuración de onboarding guardada exitosamente"
+      },
+      "system": {
+        "title": "Estado del Sistema y Logs",
+        "description": "Monitorea la salud del sistema y visualiza los logs de la aplicación",
+        "status": "Estado del Sistema",
+        "logs": "Logs de la Aplicación",
+        "placeholder": "Las características de monitoreo del sistema estarán disponibles aquí"
+      }
+    },
+    "system": {
+      "logs": {
+        "title": "Sistema",
+        "subtitle": "Logs del servicio y métricas clave",
+        "recentLogs": "Logs Recientes",
+        "stats": {
+          "process": "Contestadas",
+          "reject": "Descartados",
+          "errors": "Errores",
+          "asked": "Guardadas",
+          "notManage": "Saltadas",
+          "processedMessages": "Mensajes contestados",
+          "rejectedMessages": "Mensajes descartados",
+          "errorMessages": "Mensajes de error",
+          "askedMessages": "Mensajes guardados",
+          "notManagedMessages": "Mensajes saltados"
+        },
+        "table": {
+          "columns": {
+            "time": "Hora",
+            "process": "Contestadas",
+            "reject": "Descartados",
+            "errors": "Errores",
+            "asked": "Guardadas",
+            "notManage": "Saltadas",
+            "total": "Total",
+            "errorTypes": "Tipos de error"
+          },
+          "noResults": "No se encontraron logs"
+        }
+      }
+    }
+  }
+}

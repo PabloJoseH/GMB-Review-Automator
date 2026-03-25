@@ -1,0 +1,111 @@
+---
+description: "Reglas de TypeScript específicas para Review Responder (Next.js 16 + Server Components + Prisma + Zod). Tipado estricto, limpio y consistente con la arquitectura existente."
+globs: ["**/*.{ts,tsx}"]
+---
+
+# 🎯 NEXT.JS + TYPESCRIPT — ESTILO DE TIPADO DEL PROYECTO
+
+# ✔ PRINCIPIO BASE
+Escribir siempre TypeScript estricto, elegante y seguro, siguiendo el estilo real del proyecto:
+- Reutilizar tipos generados por Prisma y los definidos en `/lib`.
+- Evitar cualquier forma de `any`, `unknown`, `as any`, `as unknown as`.
+- Evitar `!` salvo en casos muy controlados.
+- Tipos descriptivos y explícitos.
+
+---
+
+# 📌 USO DE TIPOS GENERADOS POR PRISMA (REGLA CRÍTICA)
+- Siempre que sea posible, importar los tipos generados por Prisma:
+  import type { assets, users, organizations } from '@/app/generated/prisma'
+- Usar estos tipos para representar entidades base de BD.
+- No redefinir manualmente estos tipos.
+- Definir tipos nuevos solo cuando combines relaciones, _count, agregados, o selects/includes avanzados.
+
+---
+
+# 📌 USO DE TIPOS AVANZADOS EXISTENTES
+Antes de crear un tipo nuevo:
+1. Revisar si existe en `/lib/prisma-types.ts` o `/lib/api-types.ts`.
+2. Si existe → reutilizarlo.
+3. Si se necesita ampliación → extenderlo fuera del componente:
+   type ExtendedUser = UserWithOrganization & { extra?: string }
+
+---
+
+# 🚫 PROHIBIDO
+
+- any, unknown, object genérico.
+- Casts dobles: as unknown as.
+- Props sin tipado claro.
+- Tipar Server Actions como Promise<any>.
+- Tipos DOM en Server Components (HTMLElement, Event, etc.).
+- Record<string, any>.
+
+---
+
+# 🧱 SERVER COMPONENTS (NEXT 16)
+
+- Props definidas con interface Props.
+- No usar hooks cliente dentro de RSC.
+- No retornar estructuras no serializables.
+- Para datos provenientes de la BD → usar tipos generados por Prisma o tipos avanzados del proyecto (/lib/prisma-types.ts).
+
+---
+
+# ⚙ SERVER ACTIONS — TIPADO ESTRICTO
+
+- Validación de inputs con Zod.
+- Retornos siempre 100% serializables.
+- Para respuestas tipo API:
+    - ApiResponse<T>
+    - PaginatedApiResponse<T>
+- No retornar modelos Prisma directamente si contienen Date sin transformar.
+
+---
+
+# 🗃 PRISMA + TIPOS AVANZADOS
+
+- Includes/selects complejos → usar Prisma.validator solo en modelos (/server/models).
+- No repetir includes/selects dentro de Server Actions o componentes.
+- Para modelos extendidos, importar siempre tipos desde /server/models o /lib/prisma-types.ts.
+
+---
+
+# 📄 COMPONENTES CLIENTE
+
+- Props estrictamente tipadas.
+- Evitar any, unknown, object.
+- Para diccionarios, usar:
+    - Record<string, string>
+    - Record<string, number>
+    - Record<string, unknown>
+
+---
+
+# 🔄 NARROWING Y CONTROL DE FLUJO
+
+- Validar tipos antes de usarlos.
+- Usar early-return.
+- Narrowing explícito:
+    if (!value) return null
+    if (typeof text !== "string") throw new Error("Invalid text")
+
+--- 
+
+# 📦 IMPORTS Y BOUNDARIES
+
+- No importar Server Actions dentro de componentes cliente.
+- No importar prisma fuera de /server/models.
+- No importar rutas de /app/api/** dentro de componentes o actions.
+- Mantener estricto el boundary Server/Client de Next.js.
+
+---
+
+# ✨ ESTILO DE TIPADO DEL PROYECTO
+
+- Interfaces para objetos.
+- Types para composición y utilidades.
+- Tipos descriptivos y explícitos.
+- Preferir type para merges avanzados.
+- Un único source of truth para cada tipo.
+- Consistencia con los tipos de /lib.

@@ -1,0 +1,145 @@
+{
+  "name": "WhatsApp Webhook Tests",
+  "info": {
+    "description": "Configuración de Postman para probar el webhook de WhatsApp",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "WhatsApp Webhook Verification",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/whatsapp/responder?hub.mode=subscribe&hub.verify_token={{verify_token}}&hub.challenge={{challenge}}",
+          "host": ["{{base_url}}"],
+          "path": ["api", "whatsapp", "responder"],
+          "query": [
+            {
+              "key": "hub.mode",
+              "value": "subscribe"
+            },
+            {
+              "key": "hub.verify_token",
+              "value": "{{verify_token}}"
+            },
+            {
+              "key": "hub.challenge",
+              "value": "{{challenge}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "WhatsApp Text Message",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-hub-signature-256",
+            "value": "sha256={{signature}}",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"object\": \"whatsapp_business_account\",\n  \"entry\": [\n    {\n      \"id\": \"ENTRY_ID\",\n      \"changes\": [\n        {\n          \"value\": {\n            \"messaging_product\": \"whatsapp\",\n            \"metadata\": {\n              \"display_phone_number\": \"15551234567\",\n              \"phone_number_id\": \"{{phone_number_id}}\"\n            },\n            \"messages\": [\n              {\n                \"id\": \"wamid.{{message_id}}\",\n                \"from\": \"{{phone_number}}\",\n                \"timestamp\": \"{{timestamp}}\",\n                \"type\": \"text\",\n                \"text\": {\n                  \"body\": \"Hola, quiero información sobre sus servicios\"\n                }\n              }\n            ]\n          },\n          \"field\": \"messages\"\n        }\n      ]\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/whatsapp/responder",
+          "host": ["{{base_url}}"],
+          "path": ["api", "whatsapp", "responder"]
+        }
+      }
+    },
+    {
+      "name": "WhatsApp Location Message",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"object\": \"whatsapp_business_account\",\n  \"entry\": [\n    {\n      \"id\": \"ENTRY_ID\",\n      \"changes\": [\n        {\n          \"value\": {\n            \"messaging_product\": \"whatsapp\",\n            \"metadata\": {\n              \"display_phone_number\": \"15551234567\",\n              \"phone_number_id\": \"{{phone_number_id}}\"\n            },\n            \"messages\": [\n              {\n                \"id\": \"wamid.{{message_id}}\",\n                \"from\": \"{{phone_number}}\",\n                \"timestamp\": \"{{timestamp}}\",\n                \"type\": \"location\",\n                \"location\": {\n                  \"latitude\": 40.7128,\n                  \"longitude\": -74.0060,\n                  \"name\": \"New York City\",\n                  \"address\": \"New York, NY, USA\"\n                }\n              }\n            ]\n          },\n          \"field\": \"messages\"\n        }\n      ]\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/whatsapp/responder",
+          "host": ["{{base_url}}"],
+          "path": ["api", "whatsapp", "responder"]
+        }
+      }
+    },
+    {
+      "name": "WhatsApp Image Message",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"object\": \"whatsapp_business_account\",\n  \"entry\": [\n    {\n      \"id\": \"ENTRY_ID\",\n      \"changes\": [\n        {\n          \"value\": {\n            \"messaging_product\": \"whatsapp\",\n            \"metadata\": {\n              \"display_phone_number\": \"15551234567\",\n              \"phone_number_id\": \"{{phone_number_id}}\"\n            },\n            \"messages\": [\n              {\n                \"id\": \"wamid.{{message_id}}\",\n                \"from\": \"{{phone_number}}\",\n                \"timestamp\": \"{{timestamp}}\",\n                \"type\": \"image\",\n                \"image\": {\n                  \"id\": \"image_id_123\",\n                  \"mime_type\": \"image/jpeg\",\n                  \"sha256\": \"sha256_hash_here\",\n                  \"caption\": \"Esta es una imagen de prueba\"\n                }\n              }\n            ]\n          },\n          \"field\": \"messages\"\n        }\n      ]\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/whatsapp/responder",
+          "host": ["{{base_url}}"],
+          "path": ["api", "whatsapp", "responder"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
+      "key": "verify_token",
+      "value": "tu_token_de_verificacion",
+      "type": "string"
+    },
+    {
+      "key": "challenge",
+      "value": "challenge_code_123",
+      "type": "string"
+    },
+    {
+      "key": "phone_number_id",
+      "value": "tu_phone_number_id",
+      "type": "string"
+    },
+    {
+      "key": "phone_number",
+      "value": "573001234567",
+      "type": "string"
+    },
+    {
+      "key": "message_id",
+      "value": "{{$randomUUID}}",
+      "type": "string"
+    },
+    {
+      "key": "timestamp",
+      "value": "{{$timestamp}}",
+      "type": "string"
+    },
+    {
+      "key": "signature",
+      "value": "tu_signature_hash",
+      "type": "string"
+    }
+  ]
+}

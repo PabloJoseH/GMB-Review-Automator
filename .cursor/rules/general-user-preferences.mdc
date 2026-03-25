@@ -1,0 +1,40 @@
+---
+alwaysApply: true
+---
+# LANGUAGE
+- Always communicate in Spanish (España) when speaking to the user.
+- All identifiers (variables, functions, types, interfaces, components, filenames) must always use descriptive English names.
+# DOCUMENTATION STYLE
+- All documentation and comments must use **TSDoc** style.
+- Every file should include a **file-level TSDoc header** explaining:
+  - Purpose of the file.
+  - Key exported entities.
+  - Relevant types or variables used across the file.
+- Only add inline TSDoc comments when a piece of logic truly requires clarification.
+# COMMENT RESTRICTIONS
+- Do NOT include meta-commentary such as:
+  - “I changed this because…”
+  - “This works better like this…”
+  - “The AI decided to…”
+- Only comment functional behavior, never the reasons behind code modifications.
+- Comments must describe WHAT the code does, not WHY the AI wrote it.
+# RESPECT EXISTING DOCUMENTATION
+- If documentation already exists, DO NOT rewrite or overwrite it.
+- Only update documentation when:
+  - A variable, function or type name was changed.
+  - A new export was added.
+  - The logic changed in a way that the documentation becomes inaccurate.
+# CODE STYLE
+- Never add comments that restate what is obvious from the code itself.
+- Avoid noise comments (“helper function”, “we return the value”, etc.).
+- Keep code clean, elegant and minimalistic.
+- Prefer explicit descriptive names instead of comments explaining bad naming.
+# PRIORITIES WHEN EDITING CODE
+1. Preserve existing structure.
+2. Maintain or improve clarity.
+3. Follow the naming conventions.
+4. Update TSDoc headers only when needed.
+# IF ASKED TO REFACTOR
+- Apply transformations without adding meta-comments.
+- Keep comments strictly functional and TSDoc-compliant.
+- If a refactor changes the public interface, update the TSDoc header.
